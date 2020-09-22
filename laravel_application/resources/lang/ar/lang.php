@@ -19,7 +19,7 @@ return [
     'app_setting_app_short_description_help' => 'الوصف القصير الظاهر في العنوان ',
     'app_setting_app_short_description_placeholder' => 'ادخل الوصف القصير',
     'app_setting_app_url' => 'Application Base URL',
-    'app_setting_app_url_help' => 'Insert the base URL of your admin panel (must end with / )',
+    'app_setting_app_url_help' => 'ضع مسار لوحة التحكم متبوعة ب /',
     'app_setting_app_url_placeholder' => 'https://multi-markets.smartersvision.com/',
     'app_setting_app_version' => 'اصدار التطبيق',
     'app_setting_app_version_help' => 'ادخل اصدار التطبيق',
