@@ -120,7 +120,7 @@ return [
     'app_setting_language' => 'لغة التطبيق',
     'app_setting_language_help' => 'حدد لغة التطبيق',
     'app_setting_light_theme' => 'مظهر خفيف',
-    'app_setting_localisation' => 'ألترجمات',
+    'app_setting_localisation' => 'الترجمات',
     'app_setting_logo_bg_color' => 'خلفية الشعار الرئيسي',
     'app_setting_logo_bg_color_help' => 'حدد لون شعار الخلفية الرئيسي المفضل لديك',
     'app_setting_mail' => 'ايميل',
