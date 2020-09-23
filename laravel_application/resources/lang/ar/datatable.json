@@ -1,24 +1,24 @@
 {
-  "sProcessing":     "Procesando...",
-  "sLengthMenu":     "Mostrar _MENU_ registros",
-  "sZeroRecords":    "No se encontraron resultados",
-  "sEmptyTable":     "Ningún dato disponible en esta tabla",
-  "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-  "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-  "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+  "sProcessing":     "معالجة ...",
+  "sLengthMenu":     "إظهار سجلات _MENU_",
+  "sZeroRecords":    "لم يتم العثور على نتائج",
+  "sEmptyTable":     "لا توجد بيانات متاحة في هذا الجدول",
+  "sInfo":           "عرض السجلات من _START_ إلى _END_ من إجمالي _TOTAL_ من السجلات",
+  "sInfoEmpty":      "عرض السجلات من 0 إلى 0 من إجمالي 0 تسجيلات",
+  "sInfoFiltered":   "(تصفية إجمالي _MAX_ من السجلات)",
   "sInfoPostFix":    "",
-  "sSearch":         "Buscar:",
+  "sSearch":         "بحث:",
   "sUrl":            "",
   "sInfoThousands":  ",",
-  "sLoadingRecords": "Cargando...",
+  "sLoadingRecords": "جار التحميل...",
   "oPaginate": {
-    "sFirst":    "Primero",
-    "sLast":     "Último",
-    "sNext":     "Siguiente",
-    "sPrevious": "Anterior"
+    "sFirst":    "أول",
+    "sLast":     "آخر",
+    "sNext":     "التالية",
+    "sPrevious": "أمامي"
   },
   "oAria": {
-    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+    "sSortAscending":  ": قم بالتفعيل لفرز العمود بترتيب تصاعدي",
+    "sSortDescending": ": نشط لفرز العمود بترتيب تنازلي"
   }
 }
