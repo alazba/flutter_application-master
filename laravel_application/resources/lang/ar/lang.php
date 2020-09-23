@@ -1002,7 +1002,7 @@ return [
     'app_setting_km' => 'Km',
     'app_setting_mi' => 'mi',
     'app_setting_distance_unit_help' => 'Enter the unit of distance (must restart the app to refresh it)',
-    'market_available_for_delivery' => 'Available for delivery',
-    'market_closed' => 'Closed market',
+    'market_available_for_delivery' => 'متاح للتسليم',
+    'market_closed' => 'سوق مغلق',
     'option_group_updated_at' => 'تم التحديث في',
 ];
