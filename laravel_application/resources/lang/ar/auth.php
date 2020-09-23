@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 return [
-    'agree' => 'acepto los términos',
-    'failed' => 'Estas credenciales no coinciden con nuestros registros.',
-    'throttle' => 'Demasiados intentos de acceso. Por favor intente nuevamente en :seconds segundos.',
+    'agree' => 'أوافق على شروط',
+    'failed' => 'أوراق الاعتماد هذه لا تتطابق مع سجلاتنا.',
+    'throttle' => 'محاولات وصول كثيرة جدًا. يرجى المحاولة مرة أخرى خلال: ثواني.',
     'login_title' => '',
     'email' => '',
     'password' => '',
