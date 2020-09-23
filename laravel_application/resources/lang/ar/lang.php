@@ -322,7 +322,7 @@ return [
     'custom_field_values' => 'القيم',
     'custom_field_values_help' => 'Insert multiple values only for \'Select, Multi Select, Radio\' Ex: VALUE:KEY',
     'custom_field_values_placeholder' => 'ادخل القيمة هنا',
-    'dashboard' => 'لوحة القسادة',
+    'dashboard' => 'لوحة التحكم',
     'date' => 'التاريخ',
     'delete' => 'حذف',
     'deleted_successfully' => 'تم الحذف بنجاح',
