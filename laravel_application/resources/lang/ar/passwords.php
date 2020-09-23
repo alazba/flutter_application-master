@@ -12,9 +12,9 @@ return [
     |
     */
 
-    'password' => 'Las contraseñas deben coincidir y contener al menos 6 caracteres',
-    'reset'    => '¡Tu contraseña ha sido restablecida!',
-    'sent'     => '¡Te hemos enviado por correo el enlace para restablecer tu contraseña!',
-    'token'    => 'El token de recuperación de contraseña es inválido.',
-    'user'     => 'No podemos encontrar ningún usuario con ese correo electrónico.',
+    'password' => 'يجب أن تتطابق كلمات المرور وأن تحتوي على 6 أحرف على الأقل',
+    'reset'    => 'تم إعادة تعيين كلمة المرور الخاصة بك!',
+    'sent'     => 'لقد أرسلنا لك رابط إعادة تعيين كلمة المرور عبر البريد الإلكتروني!',
+    'token'    => 'رمز استعادة كلمة المرور غير صالح.',
+    'user'     => 'لا يمكننا العثور على أي مستخدم بهذا البريد الإلكتروني.',
 ];
