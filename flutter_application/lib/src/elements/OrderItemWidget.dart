@@ -143,10 +143,10 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                                 title: Wrap(
                                   spacing: 10,
                                   children: <Widget>[
-                                    Icon(Icons.report, color: Color(0xDDDBCB)),
+                                    Icon(Icons.report, color: Colors.orange),
                                     Text(
                                       S.of(context).confirmation,
-                                      style: TextStyle(color: Color(0xDDDBCB)),
+                                      style: TextStyle(color: Colors.orange),
                                     ),
                                   ],
                                 ),
@@ -166,7 +166,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                                   FlatButton(
                                     child: new Text(
                                       S.of(context).close,
-                                      style: TextStyle(color: Color(0xDDDBCB)),
+                                      style: TextStyle(color: Colors.orange),
                                     ),
                                     onPressed: () {
                                       Navigator.of(context).pop();
