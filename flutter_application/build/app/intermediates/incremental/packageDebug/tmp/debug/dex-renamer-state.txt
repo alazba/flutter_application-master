@@ -1,0 +1,4 @@
+#Sun Sep 27 23:29:36 AST 2020
+base.0=C\:\\Users\\Admin\\Documents\\GitHub\\FoodApp\\flutter_application\\build\\app\\intermediates\\dex\\debug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

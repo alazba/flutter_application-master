@@ -31,7 +31,7 @@ class NotDeliverableAddressesItemWidget extends StatelessWidget {
                   width: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
-                    color: Colors.orange,
+                    color: Color(0xDDDBCB),
                   ),
                   child: Icon(
                     Icons.report,

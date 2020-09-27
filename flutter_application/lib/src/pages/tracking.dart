@@ -254,10 +254,10 @@ class _TrackingWidgetState extends StateMVC<TrackingWidget> with SingleTickerPro
                                                     title: Wrap(
                                                       spacing: 10,
                                                       children: <Widget>[
-                                                        Icon(Icons.report, color: Colors.orange),
+                                                        Icon(Icons.report, color: Color(0xDDDBCB)),
                                                         Text(
                                                           S.of(context).confirmation,
-                                                          style: TextStyle(color: Colors.orange),
+                                                          style: TextStyle(color: Color(0xDDDBCB)),
                                                         ),
                                                       ],
                                                     ),
@@ -277,7 +277,7 @@ class _TrackingWidgetState extends StateMVC<TrackingWidget> with SingleTickerPro
                                                       FlatButton(
                                                         child: new Text(
                                                           S.of(context).close,
-                                                          style: TextStyle(color: Colors.orange),
+                                                          style: TextStyle(color: Color(0xDDDBCB)),
                                                         ),
                                                         onPressed: () {
                                                           Navigator.of(context).pop();
