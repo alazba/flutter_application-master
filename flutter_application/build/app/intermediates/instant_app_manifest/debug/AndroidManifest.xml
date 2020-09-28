@@ -36,8 +36,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="Markets"
-        android:testOnly="true" >
+        android:label="Markets" >
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAT07iMlfZ9bJt1gmGj9KhJDLFY8srI6dA" />
