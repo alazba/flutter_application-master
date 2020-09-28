@@ -1,4 +1,4 @@
-package com.smartersvision.markets
+package com.shrity.shugolbait
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugins.firebasemessaging.FirebaseMessagingPlugin
 
