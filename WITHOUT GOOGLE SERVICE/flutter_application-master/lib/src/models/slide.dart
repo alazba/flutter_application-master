@@ -29,9 +29,11 @@ class Slide {
       button = jsonMap['button'] != null ? jsonMap['button'].toString() : '';
       textPosition = jsonMap['text_position'] != null ? jsonMap['text_position'].toString() : '';
       textColor = jsonMap['text_color'] != null ? jsonMap['text_color'].toString() : '';
-      buttonColor = jsonMap['button_color'] != null ? jsonMap['button_color'].toString() : '';
+      //buttonColor = jsonMap['button_color'] != null ? jsonMap['button_color'].toString() : '';
+      buttonColor = "#d62828";
       backgroundColor = jsonMap['background_color'] != null ? jsonMap['background_color'].toString() : '';
-      indicatorColor = jsonMap['indicator_color'] != null ? jsonMap['indicator_color'].toString() : '';
+      //indicatorColor = jsonMap['indicator_color'] != null ? jsonMap['indicator_color'].toString() : '';
+      indicatorColor = "#d62828";
       imageFit = jsonMap['image_fit'] != null ? jsonMap['image_fit'].toString() : 'cover';
       enabled = jsonMap['enabled'] ?? false;
       market = jsonMap['market'] != null ? Market.fromJSON(jsonMap['market']) : Market.fromJSON({});

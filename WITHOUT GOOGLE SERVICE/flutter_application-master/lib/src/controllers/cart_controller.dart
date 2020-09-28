@@ -161,7 +161,7 @@ class CartController extends ControllerMVC {
 
   Color getCouponIconColor() {
     if (coupon?.valid == true) {
-      return Colors.green;
+      return Color(0xffd62828);
     } else if (coupon?.valid == false) {
       return Colors.redAccent;
     }
