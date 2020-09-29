@@ -103,7 +103,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   maxLines: 2,
                                   style: TextStyle(
                                       fontFamily: "Amiri",
-                                      fontWeight: FontWeight.w300,
+                                      fontWeight: FontWeight.w400,
                                   ),
 
                                 )
@@ -144,7 +144,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                               Row(
 
                                 children: <Widget>[
-                                  SizedBox(width: 20),
+                                  SizedBox(width: 5),
                                   Container(
                                     margin: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 8.0),
                                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
@@ -159,11 +159,11 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                             style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
                                           ),
                                   ),
-                                  SizedBox(width: 10),
+                                  SizedBox(width:0),
                                   Container(
                                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                                     decoration: BoxDecoration(
-                                        color: Helper.canDelivery(_con.market) ? Color(0xffd62828) : Colors.lightBlue, borderRadius: BorderRadius.circular(24)),
+                                        color: Helper.canDelivery(_con.market) ? Color(0xffd62828) : Color(0xffffc685), borderRadius: BorderRadius.circular(24)),
                                     child: Helper.canDelivery(_con.market)
                                         ? Text(
                                             S.of(context).delivery,
