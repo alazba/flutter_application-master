@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
              S.delegate.supportedLocales,
               theme: _setting.brightness.value == Brightness.light
                   ? ThemeData(
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Amiri',
                       primaryColor: Colors.white,
                       floatingActionButtonTheme: FloatingActionButtonThemeData(elevation: 0, foregroundColor: Colors.white),
                       brightness: Brightness.light,
@@ -92,7 +92,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     )
                   : ThemeData(
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Amiri',
                       primaryColor: Color(0xFF252525),
                       brightness: Brightness.dark,
                       scaffoldBackgroundColor: Color(0xFF2C2C2C),
