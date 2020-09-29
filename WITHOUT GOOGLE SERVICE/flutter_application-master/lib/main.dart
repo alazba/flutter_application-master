@@ -60,10 +60,14 @@ class _MyAppState extends State<MyApp> {
               locale: _setting.mobileLanguage.value,
               localizationsDelegates: [
                 S.delegate,
+                GlobalCupertinoLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
               ],
-              supportedLocales: S.delegate.supportedLocales,
+
+
+              supportedLocales:
+             S.delegate.supportedLocales,
               theme: _setting.brightness.value == Brightness.light
                   ? ThemeData(
                       fontFamily: 'ProductSans',

@@ -154,7 +154,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   Container(
                                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                                     decoration: BoxDecoration(
-                                        color: Helper.canDelivery(_con.market) ? Color(0xffd62828) : Colors.orange, borderRadius: BorderRadius.circular(24)),
+                                        color: Helper.canDelivery(_con.market) ? Color(0xffd62828) : Colors.lightBlue, borderRadius: BorderRadius.circular(24)),
                                     child: Helper.canDelivery(_con.market)
                                         ? Text(
                                             S.of(context).delivery,
@@ -188,10 +188,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                 child: ListTile(
                                   dense: true,
                                   contentPadding: EdgeInsets.symmetric(vertical: 0),
-                                  leading: Icon(
-                                    Icons.stars,
-                                    color: Theme.of(context).hintColor,
-                                  ),
+
                                   title: Text(
                                     S.of(context).information,
                                     style: Theme.of(context).textTheme.headline4,
@@ -203,25 +200,18 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                 child: Helper.applyHtml(context, _con.market.information),
                               ),
                               Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+
                                 margin: const EdgeInsets.symmetric(vertical: 5),
-                                color: Theme.of(context).primaryColor,
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Expanded(
-                                      child: Text(
-                                        _con.market.address ?? '',
-                                        overflow: TextOverflow.ellipsis,
-                                        maxLines: 2,
-                                        style: Theme.of(context).textTheme.bodyText1,
-                                      ),
-                                    ),
+
                                     SizedBox(width: 10),
-                                    SizedBox(
-                                      width: 42,
-                                      height: 42,
-                                      child: FlatButton(
+                                      SizedBox(
+                                        width: 42,
+                                        height: 42,
+                                      child:
+                                      FlatButton(
                                         padding: EdgeInsets.all(0),
                                         onPressed: () {
                                           Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: _con.market));
@@ -239,27 +229,21 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                 ),
                               ),
                               Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+
                                 margin: const EdgeInsets.symmetric(vertical: 5),
-                                color: Theme.of(context).primaryColor,
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    Expanded(
-                                      child: Text(
-                                        '${_con.market.phone} \n${_con.market.mobile}',
-                                        overflow: TextOverflow.ellipsis,
-                                        style: Theme.of(context).textTheme.bodyText1,
-                                      ),
-                                    ),
+
                                     SizedBox(width: 10),
                                     SizedBox(
                                       width: 42,
                                       height: 42,
-                                      child: FlatButton(
+                                      child:
+                                      FlatButton(
                                         padding: EdgeInsets.all(0),
                                         onPressed: () {
-                                          launch("tel:${_con.market.mobile}");
+                                          Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: _con.market));
                                         },
                                         child: Icon(
                                           Icons.call,
