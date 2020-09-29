@@ -102,7 +102,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   softWrap: false,
                                   maxLines: 2,
                                   style: TextStyle(
-                                      fontFamily: 'Amiri',
+                                      fontFamily: "Amiri",
                                       fontWeight: FontWeight.w300,
                                   ),
 
