@@ -54,12 +54,12 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           icon: Icon(
             Icons.shopping_basket,
-            color: Theme.of(context).primaryColor,
+           color: Theme.of(context).primaryColor,
           ),
-          label: Text(
-            S.of(context).shopping,
-            style: TextStyle(color: Theme.of(context).primaryColor),
-          ),
+          /*label: Text(
+            S.of(context).empty,
+           // style: TextStyle(color: Theme.of(context).primaryColor),
+          ),*/
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         body: RefreshIndicator(
@@ -178,27 +178,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   SizedBox(width: 20),
                                 ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                                child: Helper.applyHtml(context, _con.market.description),
-                              ),
-                              ImageThumbCarouselWidget(galleriesList: _con.galleries),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
-                                child: ListTile(
-                                  dense: true,
-                                  contentPadding: EdgeInsets.symmetric(vertical: 0),
 
-                                  title: Text(
-                                    S.of(context).information,
-                                    style: Theme.of(context).textTheme.headline4,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                                child: Helper.applyHtml(context, _con.market.information),
-                              ),
                               Container(
 
                                 margin: const EdgeInsets.symmetric(vertical: 5),
@@ -207,9 +187,9 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   children: <Widget>[
 
                                     SizedBox(width: 10),
-                                      SizedBox(
-                                        width: 42,
-                                        height: 42,
+                                    SizedBox(
+                                      width: 42,
+                                      height: 42,
                                       child:
                                       FlatButton(
                                         padding: EdgeInsets.all(0),
@@ -225,10 +205,52 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                         shape: StadiumBorder(),
                                       ),
                                     ),
+                                    SizedBox(width: 10),
+                                    SizedBox(
+                                      width: 42,
+                                      height: 42,
+                                      child:
+                                      FlatButton(
+                                        padding: EdgeInsets.all(0),
+                                        onPressed: () {
+                                          launch("tel:${_con.market.mobile}");
+                                        },
+                                        child: Icon(
+                                          Icons.call,
+                                          color: Theme.of(context).primaryColor,
+                                          size: 24,
+                                        ),
+                                        color: Theme.of(context).accentColor.withOpacity(0.9),
+                                        shape: StadiumBorder(),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
-                              Container(
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                                child: Helper.applyHtml(context, _con.market.description),
+                              ),
+                              ImageThumbCarouselWidget(galleriesList: _con.galleries),
+                            /*  Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: ListTile(
+                                  dense: true,
+                                  contentPadding: EdgeInsets.symmetric(vertical: 0),
+
+                                  title: Text(
+                                    S.of(context).information,
+                                    style: Theme.of(context).textTheme.headline4,
+                                  ),
+                                ),
+                              ),
+                              */
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                                child: Helper.applyHtml(context, _con.market.information),
+                              ),
+
+                             /* Container(
 
                                 margin: const EdgeInsets.symmetric(vertical: 5),
                                 child: Row(
@@ -256,7 +278,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                     ),
                                   ],
                                 ),
-                              ),
+                              ),*/
                               _con.featuredProducts.isEmpty
                                   ? SizedBox(height: 0)
                                   : Padding(

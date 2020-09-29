@@ -1542,6 +1542,14 @@ class S {
       args: [],
     );
   }
+  String get empty {
+    return Intl.message(
+      '',
+      name: '',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Delivery or Pickup`
   String get delivery_or_pickup {
