@@ -82,21 +82,36 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                           iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
                           flexibleSpace: FlexibleSpaceBar(
 
+
                           title:  Container(
 
 
-                            margin: EdgeInsets.only(left: 0.0, top: 0.0, bottom: 80.0, right: 0.0),
-                            color: Colors.red,
+                            margin: EdgeInsets.only(left: 80.0, top: 0.0, bottom: 0.0, right: 0.0),
+                            child:  new Stack(
+                              alignment: AlignmentDirectional.centerStart,
+                              children: <Widget>[
+                                Image(
+                                  image: AssetImage('assets/img/bg.png'),
+                                  width: 333.0,
+                                  height: 43.0,
+                                  alignment: AlignmentDirectional.centerStart,
+                                ),
+                                Text(
+                                  _con.market?.name ?? '',
+                                  overflow: TextOverflow.fade,
+                                  softWrap: false,
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                      fontFamily: 'Amiri',
+                                      fontWeight: FontWeight.w300,
+                                  ),
 
-                            child:  Text(
-                            _con.market?.name ?? '',
-                            overflow: TextOverflow.fade,
-                            softWrap: false,
-                            maxLines: 2,
-                            style: Theme.of(context).textTheme.headline3,
+                                )
+
+                              ],
                             ),
 
-                       /*    Text( _con.market?.description ?? '',
+                           /* child: Text( _con.market?.description ?? '',
                                   overflow: TextOverflow.fade,
                                   softWrap: false,
                                   maxLines: 2,
