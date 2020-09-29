@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:io';
 
 import '../../generated/l10n.dart';
 import '../controllers/market_controller.dart';
@@ -56,10 +57,10 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
             Icons.shopping_basket,
            color: Theme.of(context).primaryColor,
           ),
-          /*label: Text(
-            S.of(context).empty,
+          label: Text(
+            S.of(context).shopping,
            // style: TextStyle(color: Theme.of(context).primaryColor),
-          ),*/
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         body: RefreshIndicator(
@@ -74,15 +75,41 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                       shrinkWrap: false,
                       slivers: <Widget>[
                         SliverAppBar(
+
                           backgroundColor: Theme.of(context).accentColor.withOpacity(0.9),
                           expandedHeight: 300,
                           elevation: 0,
                           iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
                           flexibleSpace: FlexibleSpaceBar(
+
+                          title:  Container(
+
+
+                            margin: EdgeInsets.only(left: 0.0, top: 0.0, bottom: 80.0, right: 0.0),
+                            color: Colors.red,
+
+                            child:  Text(
+                            _con.market?.name ?? '',
+                            overflow: TextOverflow.fade,
+                            softWrap: false,
+                            maxLines: 2,
+                            style: Theme.of(context).textTheme.headline3,
+                            ),
+
+                       /*    Text( _con.market?.description ?? '',
+                                  overflow: TextOverflow.fade,
+                                  softWrap: false,
+                                  maxLines: 2,
+                                  style: Theme.of(context).textTheme.headline3,
+                                ),
+*/
+                          ),
                             collapseMode: CollapseMode.parallax,
                             background: Hero(
                               tag: (widget?.routeArgument?.heroTag ?? '') + _con.market.id,
+
                               child: CachedNetworkImage(
+
                                 fit: BoxFit.cover,
                                 imageUrl: _con.market.image.url,
                                 placeholder: (context, url) => Image.asset(
@@ -94,52 +121,19 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                             ),
                           ),
                         ),
+
                         SliverToBoxAdapter(
                           child: Wrap(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 20, left: 20, bottom: 10, top: 25),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Expanded(
-                                      child: Text(
-                                        _con.market?.name ?? '',
-                                        overflow: TextOverflow.fade,
-                                        softWrap: false,
-                                        maxLines: 2,
-                                        style: Theme.of(context).textTheme.headline3,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 32,
-                                      child: Chip(
-                                        padding: EdgeInsets.all(0),
-                                        label: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            Text(_con.market.rate,
-                                                style: Theme.of(context).textTheme.bodyText1.merge(TextStyle(color: Theme.of(context).primaryColor))),
-                                            Icon(
-                                              Icons.star_border,
-                                              color: Theme.of(context).primaryColor,
-                                              size: 16,
-                                            ),
-                                          ],
-                                        ),
-                                        backgroundColor: Theme.of(context).accentColor.withOpacity(0.9),
-                                        shape: StadiumBorder(),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+
                               Row(
+
                                 children: <Widget>[
                                   SizedBox(width: 20),
                                   Container(
+                                    margin: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 8.0),
                                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
-                                    decoration: BoxDecoration(color: _con.market.closed ? Colors.grey : Color(0xffd62828), borderRadius: BorderRadius.circular(24)),
+                                    decoration: BoxDecoration(color: _con.market.closed ? Colors.amberAccent : Color(0xffd62828), borderRadius: BorderRadius.circular(24)),
                                     child: _con.market.closed
                                         ? Text(
                                             S.of(context).closed,
@@ -175,53 +169,46 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                       style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
                                     ),
                                   ),
-                                  SizedBox(width: 20),
+                                  SizedBox(width: 15),
                                 ],
                               ),
 
+
                               Container(
 
-                                margin: const EdgeInsets.symmetric(vertical: 5),
+                                margin:
+                                EdgeInsets.only(left: 0.0, top: 8.0, bottom: 8.0, right: 310.0),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
 
                                     SizedBox(width: 10),
                                     SizedBox(
-                                      width: 42,
-                                      height: 42,
+                                      width: 35,
+                                      height: 35,
                                       child:
                                       FlatButton(
                                         padding: EdgeInsets.all(0),
                                         onPressed: () {
                                           Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: _con.market));
                                         },
-                                        child: Icon(
-                                          Icons.directions,
-                                          color: Theme.of(context).primaryColor,
-                                          size: 24,
-                                        ),
-                                        color: Theme.of(context).accentColor.withOpacity(0.9),
-                                        shape: StadiumBorder(),
+
+                                        child: Image.asset('assets/img/location2.png'),
+
                                       ),
                                     ),
                                     SizedBox(width: 10),
                                     SizedBox(
-                                      width: 42,
-                                      height: 42,
+                                      width: 35,
+                                      height: 35,
                                       child:
                                       FlatButton(
                                         padding: EdgeInsets.all(0),
                                         onPressed: () {
                                           launch("tel:${_con.market.mobile}");
                                         },
-                                        child: Icon(
-                                          Icons.call,
-                                          color: Theme.of(context).primaryColor,
-                                          size: 24,
-                                        ),
-                                        color: Theme.of(context).accentColor.withOpacity(0.9),
-                                        shape: StadiumBorder(),
+                                        child: Image.asset('assets/img/whatsapp.png'),
+
                                       ),
                                     ),
                                   ],
@@ -232,53 +219,12 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                 child: Helper.applyHtml(context, _con.market.description),
                               ),
                               ImageThumbCarouselWidget(galleriesList: _con.galleries),
-                            /*  Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
-                                child: ListTile(
-                                  dense: true,
-                                  contentPadding: EdgeInsets.symmetric(vertical: 0),
 
-                                  title: Text(
-                                    S.of(context).information,
-                                    style: Theme.of(context).textTheme.headline4,
-                                  ),
-                                ),
-                              ),
-                              */
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                                 child: Helper.applyHtml(context, _con.market.information),
                               ),
 
-                             /* Container(
-
-                                margin: const EdgeInsets.symmetric(vertical: 5),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-
-                                    SizedBox(width: 10),
-                                    SizedBox(
-                                      width: 42,
-                                      height: 42,
-                                      child:
-                                      FlatButton(
-                                        padding: EdgeInsets.all(0),
-                                        onPressed: () {
-                                          Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: _con.market));
-                                        },
-                                        child: Icon(
-                                          Icons.call,
-                                          color: Theme.of(context).primaryColor,
-                                          size: 24,
-                                        ),
-                                        color: Theme.of(context).accentColor.withOpacity(0.9),
-                                        shape: StadiumBorder(),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),*/
                               _con.featuredProducts.isEmpty
                                   ? SizedBox(height: 0)
                                   : Padding(
@@ -286,10 +232,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                       child: ListTile(
                                         dense: true,
                                         contentPadding: EdgeInsets.symmetric(vertical: 0),
-                                        leading: Icon(
-                                          Icons.shopping_basket,
-                                          color: Theme.of(context).hintColor,
-                                        ),
+
                                         title: Text(
                                           S.of(context).featured_products,
                                           style: Theme.of(context).textTheme.headline4,
