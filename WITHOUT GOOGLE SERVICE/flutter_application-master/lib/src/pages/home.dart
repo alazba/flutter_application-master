@@ -192,10 +192,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                     child: ListTile(
                       dense: true,
                       contentPadding: EdgeInsets.symmetric(vertical: 0),
-                      leading: Icon(
-                        Icons.category,
-                        color: Theme.of(context).hintColor,
-                      ),
+
                       title: Text(
                         S.of(context).product_categories,
                         style: Theme.of(context).textTheme.headline4,

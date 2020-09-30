@@ -37,12 +37,9 @@ class _ShoppingCartFloatButtonWidgetState extends StateMVC<ShoppingCartFloatButt
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 60,
-      height: 60,
-      child: RaisedButton(
-        padding: EdgeInsets.all(0),
-        color: Theme.of(context).accentColor,
-        shape: StadiumBorder(),
+
+      child: FlatButton(
+        color: Colors.transparent,
         onPressed: () {
           if (currentUser.value.apiToken != null) {
             Navigator.of(context).pushNamed('/Cart', arguments: widget.routeArgument);
@@ -51,7 +48,7 @@ class _ShoppingCartFloatButtonWidgetState extends StateMVC<ShoppingCartFloatButt
           }
         },
         child: Stack(
-          alignment: AlignmentDirectional.bottomEnd,
+          alignment: AlignmentDirectional.bottomStart,
           children: <Widget>[
             Icon(
               Icons.shopping_cart,
@@ -63,11 +60,11 @@ class _ShoppingCartFloatButtonWidgetState extends StateMVC<ShoppingCartFloatButt
                 _con.cartCount.toString(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.caption.merge(
-                      TextStyle(color: Theme.of(context).primaryColor, fontSize: 10),
+                      TextStyle(color: Theme.of(context).primaryColor, fontSize: 14),
                     ),
               ),
               padding: EdgeInsets.all(0),
-              decoration: BoxDecoration(color: this.widget.labelColor, borderRadius: BorderRadius.all(Radius.circular(10))),
+              decoration: BoxDecoration(color: Colors.brown, borderRadius: BorderRadius.all(Radius.circular(10))),
               constraints: BoxConstraints(minWidth: 15, maxWidth: 15, minHeight: 15, maxHeight: 15),
             ),
           ],

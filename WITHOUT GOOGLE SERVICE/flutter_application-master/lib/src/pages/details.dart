@@ -83,12 +83,12 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                           flexibleSpace: FlexibleSpaceBar(
 
 
-                          title:  Container(
+
+                          title: Container(
 
 
-                            margin: EdgeInsets.only(left: 80.0, top: 0.0, bottom: 0.0, right: 0.0),
+
                             child:  new Stack(
-                              alignment: AlignmentDirectional.centerStart,
                               children: <Widget>[
                                 Image(
                                   image: AssetImage('assets/img/bg.png'),
@@ -96,14 +96,15 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   height: 43.0,
                                   alignment: AlignmentDirectional.centerStart,
                                 ),
-                                Text(
+
+                               Text(
                                   _con.market?.name ?? '',
                                   overflow: TextOverflow.fade,
                                   softWrap: false,
                                   maxLines: 2,
                                   style: TextStyle(
                                       fontFamily: "Amiri",
-                                      fontWeight: FontWeight.w400,
+                                      fontWeight: FontWeight.w300,
                                   ),
 
                                 )
@@ -175,60 +176,42 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                           ),
                                   ),
                                   Expanded(child: SizedBox(height: 0)),
-                                  Container(
-                                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
-                                    decoration: BoxDecoration(
-                                        color: Helper.canDelivery(_con.market) ? Color(0xffd62828) : Colors.grey, borderRadius: BorderRadius.circular(24)),
-                                    child: Text(
-                                      Helper.getDistance(_con.market.distance, Helper.of(context).trans(setting.value.distanceUnit)),
-                                      style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
+
+                                  SizedBox(
+                                    width: 40,
+                                    height: 40,
+                                    child:
+                                    FlatButton(
+                                      padding: EdgeInsets.all(0),
+                                      onPressed: () {
+                                        Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: _con.market));
+                                      },
+
+                                      child: Image.asset('assets/img/location-de.png'),
+
                                     ),
                                   ),
+
+                                  SizedBox(
+                                    width: 35,
+                                    height: 35,
+                                    child:
+                                    FlatButton(
+                                      padding: EdgeInsets.all(0),
+                                      onPressed: () {
+                                        launch("tel:${_con.market.mobile}");
+                                      },
+                                      child: Image.asset('assets/img/whatsapp.png'),
+
+                                    ),
+                                  ),
+
                                   SizedBox(width: 15),
                                 ],
                               ),
 
 
-                              Container(
 
-                                margin:
-                                EdgeInsets.only(left: 0.0, top: 8.0, bottom: 8.0, right: 310.0),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-
-                                    SizedBox(width: 10),
-                                    SizedBox(
-                                      width: 35,
-                                      height: 35,
-                                      child:
-                                      FlatButton(
-                                        padding: EdgeInsets.all(0),
-                                        onPressed: () {
-                                          Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: _con.market));
-                                        },
-
-                                        child: Image.asset('assets/img/location2.png'),
-
-                                      ),
-                                    ),
-                                    SizedBox(width: 10),
-                                    SizedBox(
-                                      width: 35,
-                                      height: 35,
-                                      child:
-                                      FlatButton(
-                                        padding: EdgeInsets.all(0),
-                                        onPressed: () {
-                                          launch("tel:${_con.market.mobile}");
-                                        },
-                                        child: Image.asset('assets/img/whatsapp.png'),
-
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                                 child: Helper.applyHtml(context, _con.market.description),
@@ -302,8 +285,8 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                       ],
                     ),
                     Positioned(
-                      top: 32,
-                      right: 320,
+                      top: 55,
+                      right: 345,
                       child: ShoppingCartFloatButtonWidget(
                         iconColor: Theme.of(context).primaryColor,
                         labelColor: Theme.of(context).hintColor,
