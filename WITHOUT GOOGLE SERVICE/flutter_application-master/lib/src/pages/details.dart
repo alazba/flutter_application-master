@@ -149,7 +149,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   Container(
                                     margin: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0, right: 8.0),
                                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
-                                    decoration: BoxDecoration(color: _con.market.closed ? Colors.amberAccent : Color(0xffd62828), borderRadius: BorderRadius.circular(24)),
+                                    decoration: BoxDecoration(color: _con.market.closed ? Colors.amberAccent : Color(0xff3d619b), borderRadius: BorderRadius.circular(24)),
                                     child: _con.market.closed
                                         ? Text(
                                             S.of(context).closed,
@@ -164,7 +164,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   Container(
                                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                                     decoration: BoxDecoration(
-                                        color: Helper.canDelivery(_con.market) ? Color(0xffd62828) : Color(0xffffc685), borderRadius: BorderRadius.circular(24)),
+                                        color: Helper.canDelivery(_con.market) ? Color(0xff3d619b) : Colors.orange, borderRadius: BorderRadius.circular(24)),
                                     child: Helper.canDelivery(_con.market)
                                         ? Text(
                                             S.of(context).delivery,
