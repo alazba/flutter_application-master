@@ -48,19 +48,28 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
     return Scaffold(
         key: _con.scaffoldKey,
         floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: Colors.transparent,
+
           onPressed: () {
             Navigator.of(context).pushNamed('/Menu',
                 arguments: new RouteArgument(id: widget.routeArgument.id));
           },
+
           isExtended: true,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          icon: Icon(
-            Icons.shopping_basket,
-            color: Theme.of(context).primaryColor,
-          ),
-          label: Text(
+         icon: Transform.scale(
+           scale: 3.0,
+           child: IconButton(
+             onPressed: (){},
+             icon: new Image.asset("assets/img/bag.png"),
+           ),
+         ),
+          label:
+          
+          Text(
             S.of(context).shopping,
-            // style: TextStyle(color: Theme.of(context).primaryColor),
+             style: TextStyle(color: Colors.redAccent),
+            textAlign: TextAlign.left,
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
@@ -335,7 +344,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                       ],
                     ),
                     Positioned(
-                      top: 55,
+                      top: 50,
                       right: 345,
                       child: ShoppingCartFloatButtonWidget(
                         iconColor: Theme.of(context).primaryColor,

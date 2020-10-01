@@ -67,7 +67,11 @@ class _MyAppState extends State<MyApp> {
 
 
               supportedLocales:
-             S.delegate.supportedLocales,
+              [
+                Locale("en", "US"),
+                Locale("ar", "AE"), // OR Locale('ar', 'AE') OR Other RTL locales
+              ],
+
               theme: _setting.brightness.value == Brightness.light
                   ? ThemeData(
                       fontFamily: 'Amiri',

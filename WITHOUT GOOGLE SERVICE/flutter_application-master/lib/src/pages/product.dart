@@ -250,8 +250,8 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                     ),
                   ),
                   Positioned(
-                    top: 32,
-                    right: 20,
+                    top: 50,
+                    right: 345,
                     child: _con.loadCart
                         ? SizedBox(
                             width: 60,
