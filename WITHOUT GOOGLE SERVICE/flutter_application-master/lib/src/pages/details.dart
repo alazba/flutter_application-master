@@ -67,12 +67,11 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
          Transform.scale(
            alignment: Alignment.centerRight,
 
-           scale: 2.5,
+           scale: 2.7,
            child:
 
              IconButton(
-
-               onPressed: (){},
+                 onPressed: (){},
               icon:
               new Image.asset("assets/img/bag.png"),
            ),
@@ -84,6 +83,8 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                 Text(
                   S.of(context).shopping,
              style: TextStyle(color: Colors.blueGrey, fontSize: 21),
+                  textAlign: TextAlign.right,
+
                 ),
 
         ),
