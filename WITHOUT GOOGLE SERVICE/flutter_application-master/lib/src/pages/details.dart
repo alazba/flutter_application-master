@@ -47,7 +47,11 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
         key: _con.scaffoldKey,
-        floatingActionButton: FloatingActionButton.extended(
+
+        floatingActionButton:
+
+        FloatingActionButton.extended(
+
           backgroundColor: Colors.transparent,
 
           onPressed: () {
@@ -57,22 +61,34 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
 
           isExtended: true,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-         icon: Transform.scale(
-           scale: 3.0,
-           child: IconButton(
-             onPressed: (){},
-             icon: new Image.asset("assets/img/bag.png"),
+
+         icon:
+
+         Transform.scale(
+           alignment: Alignment.centerRight,
+
+           scale: 2.5,
+           child:
+
+             IconButton(
+
+               onPressed: (){},
+              icon:
+              new Image.asset("assets/img/bag.png"),
            ),
+
          ),
+
           label:
-          
-          Text(
-            S.of(context).shopping,
-             style: TextStyle(color: Colors.redAccent),
-            textAlign: TextAlign.left,
-          ),
+
+                Text(
+                  S.of(context).shopping,
+             style: TextStyle(color: Colors.blueGrey, fontSize: 21),
+                ),
+
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
         body: RefreshIndicator(
           onRefresh: _con.refreshMarket,
           child: _con.market == null

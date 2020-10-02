@@ -208,7 +208,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "select_your_preferred_payment_mode" : MessageLookupByLibrary.simpleMessage("حدد وضع الدفع المفضل لديك"),
     "send_password_reset_link" : MessageLookupByLibrary.simpleMessage("أرسل الرابط"),
     "settings" : MessageLookupByLibrary.simpleMessage("الإعدادات"),
-    "shopping" : MessageLookupByLibrary.simpleMessage("التسوق"),
+    "shopping" : MessageLookupByLibrary.simpleMessage("تسوق"),
     "shopping_cart" : MessageLookupByLibrary.simpleMessage("عربة التسوق"),
     "should_be_a_valid_email" : MessageLookupByLibrary.simpleMessage("يجب أن يكون بريدًا إلكترونيًا صالحًا"),
     "should_be_more_than_3_characters" : MessageLookupByLibrary.simpleMessage("يجب أن يكون أكثر من 3 أحرف"),
