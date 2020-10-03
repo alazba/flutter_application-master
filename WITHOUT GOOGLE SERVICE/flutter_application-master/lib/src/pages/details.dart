@@ -51,27 +51,27 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
         floatingActionButton:
 
     FloatingActionButton.extended(
+      
 
           backgroundColor: Colors.transparent,
 
-          onPressed: () {
+      onPressed: () {
             Navigator.of(context).pushNamed('/Menu',
                 arguments: new RouteArgument(id: widget.routeArgument.id));
           },
 
           isExtended: true,
-          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
 
          icon:
-
          Transform.scale(
-             alignment: Alignment(1.2, 0.3),
 
+           alignment: Alignment(1.2, 0.3),
            scale: 2.7,
            child:
 
              IconButton(
-                 onPressed: (){},
+               iconSize: 30,
+               onPressed: (){},
               icon:
 
               new Image.asset("assets/img/bag.png"),
@@ -108,18 +108,22 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                           iconTheme: IconThemeData(
                               color: Theme.of(context).primaryColor),
                           flexibleSpace: FlexibleSpaceBar(
-                            title: Column(children: <Widget>[
+                            centerTitle: true,
+                            title:
+                            Column(children: <Widget>[
                               Container(
                                 margin: EdgeInsets.only(left: 0.0, top: 150.0, bottom: 0.0, right: 0.0),
                                 child: new Stack(
+                                  alignment: Alignment.center,
                                   children: <Widget>[
-                                    Image(
+                                    /* Image(
                                       image: AssetImage('assets/img/bg.png'),
                                       width: 333.0,
                                       height: 43.0,
                                       alignment:
                                           AlignmentDirectional.centerStart,
-                                    ),
+                                    ),*/
+
                                     Text(
                                       _con.market?.name ?? '',
                                       overflow: TextOverflow.fade,
@@ -130,29 +134,8 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                         fontWeight: FontWeight.w100,
                                       ),
                                     ),
-                                    // Padding(
-                                    //   padding: const EdgeInsets.symmetric(
-                                    //       horizontal: 20, vertical: 12),
-                                    //   child: Helper.applyHtml(
-                                    //       context, _con.market.description),
-                                    // ),
                                   ],
-
                                 ),
-
-                                /* child: Text( _con.market?.description ?? '',
-                                  overflow: TextOverflow.fade,
-                                  softWrap: false,
-                                  maxLines: 2,
-                                  style: Theme.of(context).textTheme.headline3,
-                                ),
-*/
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 20, vertical: 0),
-                                child: Helper.applyHtml(
-                                    context, _con.market.description),
                               ),
                             ]),
                             collapseMode: CollapseMode.parallax,
@@ -242,7 +225,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                                         .primaryColor)),
                                           ),
                                   ),
-                                  Expanded(child: SizedBox(height: 0)),
+                              /*    Expanded(child: SizedBox(height: 0)),
                                   SizedBox(
                                     width: 40,
                                     height: 40,
@@ -269,16 +252,18 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                       child: Image.asset(
                                           'assets/img/whatsapp.png'),
                                     ),
-                                  ),
+                                  ),*/
+
                                   SizedBox(width: 15),
                                 ],
                               ),
-                              Padding(
+                          Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 20, vertical: 12),
                                 child: Helper.applyHtml(
                                     context, _con.market.description),
                               ),
+
                               ImageThumbCarouselWidget(
                                   galleriesList: _con.galleries),
                               Padding(
