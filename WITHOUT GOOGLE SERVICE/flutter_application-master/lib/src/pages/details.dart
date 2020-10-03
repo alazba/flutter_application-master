@@ -50,7 +50,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
 
         floatingActionButton:
 
-        FloatingActionButton.extended(
+    FloatingActionButton.extended(
 
           backgroundColor: Colors.transparent,
 
@@ -65,7 +65,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
          icon:
 
          Transform.scale(
-           alignment: Alignment.centerRight,
+             alignment: Alignment(1.2, 0.3),
 
            scale: 2.7,
            child:
@@ -73,6 +73,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
              IconButton(
                  onPressed: (){},
               icon:
+
               new Image.asset("assets/img/bag.png"),
            ),
 
@@ -83,8 +84,6 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                 Text(
                   S.of(context).shopping,
              style: TextStyle(color: Colors.blueGrey, fontSize: 21),
-                  textAlign: TextAlign.right,
-
                 ),
 
         ),
