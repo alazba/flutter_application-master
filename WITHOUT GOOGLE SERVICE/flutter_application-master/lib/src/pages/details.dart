@@ -101,8 +101,8 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                       shrinkWrap: false,
                       slivers: <Widget>[
                         SliverAppBar(
-                          backgroundColor:
-                              Theme.of(context).accentColor.withOpacity(0.9),
+
+                          backgroundColor: Theme.of(context).accentColor.withOpacity(0.9),
                           expandedHeight:200,
                           elevation: 0,
                           iconTheme: IconThemeData(
@@ -110,7 +110,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                           flexibleSpace: FlexibleSpaceBar(
                             title: Column(children: <Widget>[
                               Container(
-                                margin: EdgeInsets.only(left: 0.0, top: 100.0, bottom: 0.0, right: 0.0),
+                                margin: EdgeInsets.only(left: 0.0, top: 150.0, bottom: 0.0, right: 0.0),
                                 child: new Stack(
                                   children: <Widget>[
                                     Image(
@@ -219,7 +219,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                     decoration: BoxDecoration(
                                         color: Helper.canDelivery(_con.market)
                                             ? Color(0xff3d619b)
-                                            : Colors.orange,
+                                            : Color(0xffEF8626),
                                         borderRadius:
                                             BorderRadius.circular(24)),
                                     child: Helper.canDelivery(_con.market)
