@@ -103,7 +103,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                         SliverAppBar(
 
                           backgroundColor: Theme.of(context).accentColor.withOpacity(0.9),
-                          expandedHeight:200,
+                          expandedHeight:250,
                           elevation: 0,
                           iconTheme: IconThemeData(
                               color: Theme.of(context).primaryColor),
@@ -112,17 +112,16 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                             title:
                             Column(children: <Widget>[
                               Container(
-                                margin: EdgeInsets.only(left: 0.0, top: 150.0, bottom: 0.0, right: 0.0),
+                                margin: EdgeInsets.only(left: 0.0, top: 200.0, bottom: 0.0, right: 0.0),
                                 child: new Stack(
                                   alignment: Alignment.center,
                                   children: <Widget>[
-                                    /* Image(
+                                     Image(
                                       image: AssetImage('assets/img/bg.png'),
                                       width: 333.0,
                                       height: 43.0,
-                                      alignment:
-                                          AlignmentDirectional.centerStart,
-                                    ),*/
+
+                                    ),
 
                                     Text(
                                       _con.market?.name ?? '',
@@ -202,7 +201,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                     decoration: BoxDecoration(
                                         color: Helper.canDelivery(_con.market)
                                             ? Color(0xff3d619b)
-                                            : Color(0xffEF8626),
+                                            : Color(0xffC4A87B),
                                         borderRadius:
                                             BorderRadius.circular(24)),
                                     child: Helper.canDelivery(_con.market)

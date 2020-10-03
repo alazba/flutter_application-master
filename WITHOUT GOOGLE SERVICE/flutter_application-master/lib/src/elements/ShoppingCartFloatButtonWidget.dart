@@ -64,7 +64,7 @@ class _ShoppingCartFloatButtonWidgetState extends StateMVC<ShoppingCartFloatButt
                     ),
               ),
               padding: EdgeInsets.all(0),
-              decoration: BoxDecoration(color: Color(0xffEF8626), borderRadius: BorderRadius.all(Radius.circular(10))),
+              decoration: BoxDecoration(color: Color(0xffC4A87B), borderRadius: BorderRadius.all(Radius.circular(10))),
               constraints: BoxConstraints(minWidth: 15, maxWidth: 15, minHeight: 15, maxHeight: 15),
             ),
           ],
