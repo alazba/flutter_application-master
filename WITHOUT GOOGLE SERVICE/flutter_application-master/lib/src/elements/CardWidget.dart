@@ -113,14 +113,14 @@ class CardWidget extends StatelessWidget {
                         style: Theme.of(context).textTheme.caption,
                       ),
                       SizedBox(height: 5),
-                      Row(
+                    /*  Row(
                         children: Helper.getStarsList(double.parse(market.rate)),
-                      ),
+                      ),*/
                     ],
                   ),
                 ),
                 SizedBox(width: 15),
-                Expanded(
+               /* Expanded(
                   child: Column(
                     children: <Widget>[
                       FlatButton(
@@ -142,7 +142,7 @@ class CardWidget extends StatelessWidget {
                           : SizedBox(height: 0)
                     ],
                   ),
-                ),
+                ),*/
               ],
             ),
           )

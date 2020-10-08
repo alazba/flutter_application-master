@@ -102,7 +102,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                                   _con.requestForCurrentLocation(context);
                                 } else {
                                   var bottomSheetController = widget.parentScaffoldKey.currentState.showBottomSheet(
-                                    (context) => DeliveryAddressBottomSheetWidget(scaffoldKey: widget.parentScaffoldKey),
+                                        (context) => DeliveryAddressBottomSheetWidget(scaffoldKey: widget.parentScaffoldKey),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: new BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                                     ),
@@ -124,7 +124,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                                   S.of(context).delivery,
                                   style: TextStyle(
                                       color:
-                                          settingsRepo.deliveryAddress.value?.address == null ? Theme.of(context).hintColor : Theme.of(context).primaryColor),
+                                      settingsRepo.deliveryAddress.value?.address == null ? Theme.of(context).hintColor : Theme.of(context).primaryColor),
                                 ),
                               ),
                             ),
@@ -147,7 +147,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                                   S.of(context).pickup,
                                   style: TextStyle(
                                       color:
-                                          settingsRepo.deliveryAddress.value?.address != null ? Theme.of(context).hintColor : Theme.of(context).primaryColor),
+                                      settingsRepo.deliveryAddress.value?.address != null ? Theme.of(context).hintColor : Theme.of(context).primaryColor),
                                 ),
                               ),
                             ),
