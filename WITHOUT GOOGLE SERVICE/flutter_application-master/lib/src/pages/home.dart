@@ -203,7 +203,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                   return CategoriesCarouselWidget(
                     categories: _con.categories,
                   );
-                case 'popular_heading':
+                /*case 'popular_heading':
                   return Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                     child: ListTile(
@@ -218,7 +218,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                         style: Theme.of(context).textTheme.headline4,
                       ),
                     ),
-                  );
+                  );*/
                 case 'popular':
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
