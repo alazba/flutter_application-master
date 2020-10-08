@@ -48,13 +48,17 @@ class _ShoppingCartFloatButtonWidgetState extends StateMVC<ShoppingCartFloatButt
           }
         },
         child: Stack(
-          alignment: AlignmentDirectional.bottomStart,
+          alignment: AlignmentDirectional.topEnd,
           children: <Widget>[
+
+
             Icon(
               Icons.shopping_cart,
               color: this.widget.iconColor,
               size: 28,
             ),
+
+
             Container(
               child: Text(
                 _con.cartCount.toString(),
