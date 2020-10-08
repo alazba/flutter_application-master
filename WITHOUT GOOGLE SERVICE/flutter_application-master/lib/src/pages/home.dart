@@ -218,7 +218,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                         style: Theme.of(context).textTheme.headline4,
                       ),
                     ),
-                  );*/
+                  );
                 case 'popular':
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -226,7 +226,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                       marketsList: _con.popularMarkets,
                       heroTag: 'home_markets',
                     ),
-                  );
+                  );*/
                 case 'recent_reviews_heading':
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
