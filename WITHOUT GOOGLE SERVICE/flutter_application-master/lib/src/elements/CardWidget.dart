@@ -112,14 +112,14 @@ class CardWidget extends StatelessWidget {
                         softWrap: false,
                         style: Theme.of(context).textTheme.caption,
                       ),
-                      SizedBox(height: 5),
+                     // SizedBox(height: 5),
                     /*  Row(
                         children: Helper.getStarsList(double.parse(market.rate)),
                       ),*/
                     ],
                   ),
                 ),
-                SizedBox(width: 15),
+                //SizedBox(width: 15),
                /* Expanded(
                   child: Column(
                     children: <Widget>[
