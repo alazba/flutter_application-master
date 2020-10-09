@@ -50,23 +50,26 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
 
         floatingActionButton:
 
+
     FloatingActionButton.extended(
-      
+
 
           backgroundColor: Colors.transparent,
+
+
 
       onPressed: () {
             Navigator.of(context).pushNamed('/Menu',
                 arguments: new RouteArgument(id: widget.routeArgument.id));
           },
 
-          isExtended: true,
+          isExtended: false,
 
          icon:
          Transform.scale(
 
-           alignment: Alignment(1.3, 0.3),
-           scale: 2.5,
+           alignment: Alignment(1.6, 0.3),
+           scale: 2.2,
            child:
 
              IconButton(
@@ -83,12 +86,13 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
 
                 Text(
                   S.of(context).shopping,
-             style: TextStyle(color: Colors.blueGrey, fontSize: 18),
+             style: TextStyle(color: Colors.blueGrey, fontSize: 17),
                 ),
 
         ),
 
-        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+
         body: RefreshIndicator(
           onRefresh: _con.refreshMarket,
           child: _con.market == null
