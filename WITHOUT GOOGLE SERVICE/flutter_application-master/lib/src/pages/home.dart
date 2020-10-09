@@ -48,7 +48,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
           builder: (context, value, child) {
             return Text(
               value.appName ?? S.of(context).home,
-              style: Theme.of(context).textTheme.headline6.merge(TextStyle(letterSpacing: 1.3)),
+              style: Theme.of(context).textTheme.headline6.merge(TextStyle(color: Colors.black54,  fontSize: 25,)),
             );
           },
         ),
