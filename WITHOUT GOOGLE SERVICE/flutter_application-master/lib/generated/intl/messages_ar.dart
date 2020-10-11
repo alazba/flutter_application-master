@@ -192,7 +192,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "razorpay" : MessageLookupByLibrary.simpleMessage("RazorPay"),
     "razorpayPayment" : MessageLookupByLibrary.simpleMessage("RazorPay Payment"),
     "recent_orders" : MessageLookupByLibrary.simpleMessage("الطلبيات الأخيرة"),
-    "recent_reviews" : MessageLookupByLibrary.simpleMessage("المراجعات الأخيرة"),
+    "recent_reviews" : MessageLookupByLibrary.simpleMessage("المشاريع"),
     "recents_search" : MessageLookupByLibrary.simpleMessage("البحث الأخير"),
     "register" : MessageLookupByLibrary.simpleMessage("تسجيل"),
     "reset" : MessageLookupByLibrary.simpleMessage("إعادة تعيين"),

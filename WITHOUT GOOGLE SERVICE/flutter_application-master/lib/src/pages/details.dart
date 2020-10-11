@@ -106,7 +106,6 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                       slivers: <Widget>[
                         SliverAppBar(
 
-                          backgroundColor: Theme.of(context).accentColor.withOpacity(0.9),
                           expandedHeight:250,
                           elevation: 0,
                           iconTheme: IconThemeData(
@@ -116,7 +115,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                             title:
                             Row(children: <Widget>[
                               Container(
-                                margin: EdgeInsets.only(left: 0.0, top: 200.0, bottom: 0.0, right: 0.0),
+                                margin: EdgeInsets.only(left: 0.0, top: 100.0, bottom: 0.0, right: 15.0),
                                 child: new Stack(
                                   alignment: Alignment.center,
                                   children: <Widget>[
