@@ -89,14 +89,14 @@ class CardWidget extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Expanded(
-                  flex: 3,
+                  flex: 2,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -113,17 +113,17 @@ class CardWidget extends StatelessWidget {
                         style: Theme.of(context).textTheme.caption,
                       ),
                      // SizedBox(height: 5),
-                    /*  Row(
+                     /* Row(
                         children: Helper.getStarsList(double.parse(market.rate)),
                       ),*/
                     ],
                   ),
                 ),
                 //SizedBox(width: 15),
-               /* Expanded(
+                Expanded(
                   child: Column(
                     children: <Widget>[
-                      FlatButton(
+                     /* FlatButton(
                         padding: EdgeInsets.all(0),
                         onPressed: () {
                           Navigator.of(context).pushNamed('/Pages', arguments: new RouteArgument(id: '1', param: market));
@@ -139,10 +139,13 @@ class CardWidget extends StatelessWidget {
                               maxLines: 1,
                               softWrap: false,
                             )
-                          : SizedBox(height: 0)
+                          : SizedBox(height: 0)*/
+                      Row(
+                        children: Helper.getStarsList(double.parse(market.rate)),
+                      ),
                     ],
                   ),
-                ),*/
+                ),
               ],
             ),
           )
