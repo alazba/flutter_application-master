@@ -176,7 +176,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                             ? Colors.amberAccent
                                             : Color(0xff3d619b),
                                         borderRadius:
-                                            BorderRadius.circular(24)),
+                                            BorderRadius.circular(5)),
                                     child: _con.market.closed
                                         ? Text(
                                             S.of(context).closed,
