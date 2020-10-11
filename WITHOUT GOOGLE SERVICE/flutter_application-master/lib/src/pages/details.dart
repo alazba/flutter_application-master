@@ -206,7 +206,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                             ? Color(0xff3d619b)
                                             : Color(0xffC4A87B),
                                         borderRadius:
-                                            BorderRadius.circular(24)),
+                                            BorderRadius.circular(5)),
                                     child: Helper.canDelivery(_con.market)
                                         ? Text(
                                             S.of(context).delivery,
