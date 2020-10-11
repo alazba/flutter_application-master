@@ -114,7 +114,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                           flexibleSpace: FlexibleSpaceBar(
                             centerTitle: true,
                             title:
-                            Column(children: <Widget>[
+                            Row(children: <Widget>[
                               Container(
                                 margin: EdgeInsets.only(left: 0.0, top: 200.0, bottom: 0.0, right: 0.0),
                                 child: new Stack(
@@ -122,7 +122,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                   children: <Widget>[
                                      Image(
                                       image: AssetImage('assets/img/bg.png'),
-                                      width: 333.0,
+                                      width: 250.0,
                                       height: 43.0,
 
                                     ),
