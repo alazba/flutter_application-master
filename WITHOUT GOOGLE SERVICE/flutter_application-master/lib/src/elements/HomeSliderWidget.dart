@@ -53,13 +53,13 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                         height: 140,
                         decoration: BoxDecoration(
                           boxShadow: [
-                            BoxShadow(color: Theme.of(context).focusColor.withOpacity(0.15), blurRadius: 15, offset: Offset(0, 2)),
+                            BoxShadow(color: Theme.of(context).focusColor.withOpacity(0.15), blurRadius: 5, offset: Offset(0, 2)),
                           ],
                         ),
                         child: Stack(
                           children: [
                             ClipRRect(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
                               child: CachedNetworkImage(
                                 height: 140,
                                 width: double.infinity,
@@ -139,7 +139,7 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(8),
+                            Radius.circular(5),
                           ),
                           color: _current == widget.slides.indexOf(slide)
                               ? Helper.of(context).getColorFromHex(slide.indicatorColor)

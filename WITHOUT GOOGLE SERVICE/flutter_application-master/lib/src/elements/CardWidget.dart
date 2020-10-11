@@ -38,7 +38,7 @@ class CardWidget extends StatelessWidget {
               Hero(
                 tag: this.heroTag + market.id,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
                   child: CachedNetworkImage(
                     height: 150,
                     width: double.infinity,

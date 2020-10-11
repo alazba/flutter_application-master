@@ -15,7 +15,7 @@ class HomeSliderLoaderWidget extends StatelessWidget {
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: BorderRadius.all(Radius.circular(5)),
         child: Image.asset('assets/img/loading.gif', fit: BoxFit.cover),
       ),
     );
