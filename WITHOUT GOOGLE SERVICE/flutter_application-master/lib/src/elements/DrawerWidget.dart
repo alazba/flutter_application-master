@@ -6,14 +6,12 @@ import '../controllers/profile_controller.dart';
 import '../repository/settings_repository.dart';
 import '../repository/user_repository.dart';
 
-class DrawerWidget extends StatefulWidget {
+class AppDrawer extends StatefulWidget {
   @override
-  _DrawerWidgetState createState() => _DrawerWidgetState();
+  _AppDrawerState createState() => _AppDrawerState();
 }
 
-class _DrawerWidgetState extends StateMVC<DrawerWidget> {
-  _DrawerWidgetState() : super(ProfileController()) {}
-
+class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
