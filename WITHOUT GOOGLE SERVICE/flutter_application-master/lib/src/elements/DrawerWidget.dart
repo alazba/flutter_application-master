@@ -25,7 +25,7 @@ class _AppDrawerState extends State<AppDrawer> {
               child: FlatButton.icon(
                 icon: Icon(
                   Icons.arrow_back,
-                  color: Color(0xFF015FFF),
+                  color: Color(0xff3d619b),
                 ),
                 onPressed: () => Navigator.pop(context),
                 label: Text("",
@@ -35,9 +35,10 @@ class _AppDrawerState extends State<AppDrawer> {
                         color: Colors.transparent)),
               ),
             ),
-            buildMenuItem(Icons.person, S.of(context).guest,
 
-                opacity: 1.0, color: Color(0xFF015FFF)),
+            buildMenuItem( Icons.person, S.of(context).guest,
+
+                opacity: 1.0, color: Color(0xff3d619b)),
             Divider(),
             buildMenuItem(Icons.home, S.of(context).home,),
             Divider(),

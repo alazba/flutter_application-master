@@ -134,7 +134,7 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                                       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
                                       decoration: BoxDecoration(
                                           color: Helper.canDelivery(_con.product.market) && _con.product.deliverable ? Color(0xff3d619b) : Colors.orange,
-                                          borderRadius: BorderRadius.circular(24)),
+                                          borderRadius: BorderRadius.circular(5)),
                                       child: Helper.canDelivery(_con.product.market) && _con.product.deliverable
                                           ? Text(
                                               S.of(context).deliverable,
@@ -148,7 +148,7 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                                     Expanded(child: SizedBox(height: 0)),
                                     Container(
                                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
-                                        decoration: BoxDecoration(color: Theme.of(context).focusColor, borderRadius: BorderRadius.circular(24)),
+                                        decoration: BoxDecoration(color: Theme.of(context).focusColor, borderRadius: BorderRadius.circular(5)),
                                         child: Text(
                                           _con.product.capacity + " " + _con.product.unit,
                                           style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
@@ -156,7 +156,7 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                                     SizedBox(width: 5),
                                     Container(
                                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3),
-                                        decoration: BoxDecoration(color: Theme.of(context).focusColor, borderRadius: BorderRadius.circular(24)),
+                                        decoration: BoxDecoration(color: Theme.of(context).focusColor, borderRadius: BorderRadius.circular(5)),
                                         child: Text(
                                           _con.product.packageItemsCount + " " + S.of(context).items,
                                           style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
@@ -324,7 +324,9 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                                           },
                                           padding: EdgeInsets.symmetric(vertical: 14),
                                           color: Theme.of(context).primaryColor,
-                                          shape: StadiumBorder(),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(7.0),
+                                          ),
                                           borderSide: BorderSide(color: Theme.of(context).accentColor),
                                           child: Icon(
                                             Icons.favorite,
@@ -340,8 +342,9 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                                           },
                                           padding: EdgeInsets.symmetric(vertical: 14),
                                           color: Theme.of(context).accentColor,
-                                          shape: StadiumBorder(),
-                                          child: Icon(
+                                          shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(7.0),),
+                                              child: Icon(
                                             Icons.favorite,
                                             color: Theme.of(context).primaryColor,
                                           )),
@@ -378,7 +381,9 @@ class _ProductWidgetState extends StateMVC<ProductWidget> {
                                         },
                                         padding: EdgeInsets.symmetric(vertical: 14),
                                         color: Theme.of(context).accentColor,
-                                        shape: StadiumBorder(),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(7.0),
+                                        ),
                                         child: Container(
                                           width: double.infinity,
                                           padding: const EdgeInsets.symmetric(horizontal: 20),
