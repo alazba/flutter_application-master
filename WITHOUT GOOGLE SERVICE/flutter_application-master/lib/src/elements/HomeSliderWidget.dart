@@ -79,7 +79,7 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                               width: double.infinity,
                               padding: const EdgeInsets.symmetric(horizontal: 20),
                               child: Container(
-                                width: config.App(context).appWidth(40),
+                                width: config.App(context).appWidth(25),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.stretch,
                                   mainAxisSize: MainAxisSize.max,
@@ -100,23 +100,27 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                                         maxLines: 3,
                                       ),
                                     if (slide.button != null && slide.button != '')
-                                      FlatButton(
-                                        onPressed: () {
-                                          if (slide.market != null) {
-                                            Navigator.of(context).pushNamed('/Details', arguments: RouteArgument(id: slide.market.id, heroTag: 'home_slide'));
-                                          } else if (slide.product != null) {
-                                            Navigator.of(context).pushNamed('/Product', arguments: RouteArgument(id: slide.product.id, heroTag: 'home_slide'));
-                                          }
-                                        },
-                                        padding: EdgeInsets.symmetric(vertical: 5),
-                                        color: Helper.of(context).getColorFromHex(slide.buttonColor),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(5.0),
-                                        ),
-                                        child: Text(
-                                          slide.button,
-                                          textAlign: TextAlign.start,
-                                          style: TextStyle(color: Theme.of(context).primaryColor),
+
+                                      SizedBox(
+                                        width: 20, // specific value
+                                        child: RaisedButton(
+                                          onPressed: () {
+                                            if (slide.market != null) {
+                                              Navigator.of(context).pushNamed('/Details', arguments: RouteArgument(id: slide.market.id, heroTag: 'home_slide'));
+                                            } else if (slide.product != null) {
+                                              Navigator.of(context).pushNamed('/Product', arguments: RouteArgument(id: slide.product.id, heroTag: 'home_slide'));
+                                            }
+                                            },
+                                          padding: EdgeInsets.symmetric(vertical: 5),
+                                          color: Helper.of(context).getColorFromHex(slide.buttonColor),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(5),
+                                          ),
+                                          child: Text(
+                                            slide.button,
+                                            textAlign: TextAlign.start,
+                                            style: TextStyle(color: Theme.of(context).primaryColor),
+                                          ),
                                         ),
                                       ),
                                   ],
