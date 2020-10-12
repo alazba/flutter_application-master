@@ -248,6 +248,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                 case 'recent_reviews':
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
+                   // child: ReviewsListWidget(reviewsList: _con.recentReviews),
                     child: HomeShopList(marketsList: _con.markets),
                   );
                 default:
