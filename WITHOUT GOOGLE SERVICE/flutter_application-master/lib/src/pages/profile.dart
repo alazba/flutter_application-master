@@ -3,7 +3,7 @@ import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
 import '../controllers/profile_controller.dart';
-import '../elements/DrawerWidgetxx.dart';
+import '../elements/DrawerWidget.dart';
 import '../elements/EmptyOrdersWidget.dart';
 import '../elements/OrderItemWidget.dart';
 import '../elements/PermissionDeniedWidget.dart';

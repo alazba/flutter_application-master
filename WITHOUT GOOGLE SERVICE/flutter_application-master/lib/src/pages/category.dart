@@ -5,7 +5,7 @@ import '../../generated/l10n.dart';
 import '../controllers/category_controller.dart';
 import '../elements/AddToCartAlertDialog.dart';
 import '../elements/CircularLoadingWidget.dart';
-import '../elements/DrawerWidgetxx.dart';
+import '../elements/DrawerWidget.dart';
 import '../elements/FilterWidget.dart';
 import '../elements/ProductGridItemWidget.dart';
 import '../elements/ProductListItemWidget.dart';

@@ -6,7 +6,7 @@ import 'package:mvc_pattern/mvc_pattern.dart';
 import '../../generated/l10n.dart';
 import '../controllers/market_controller.dart';
 import '../elements/CircularLoadingWidget.dart';
-import '../elements/DrawerWidgetxx.dart';
+import '../elements/DrawerWidget.dart';
 import '../elements/ProductItemWidget.dart';
 import '../elements/ProductsCarouselWidget.dart';
 import '../elements/SearchBarWidget.dart';
