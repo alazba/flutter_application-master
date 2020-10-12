@@ -15,7 +15,7 @@ class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 130.0,
+      width: 100.0,
       child: Drawer(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -28,25 +28,27 @@ class _AppDrawerState extends State<AppDrawer> {
                   color: Color(0xFF015FFF),
                 ),
                 onPressed: () => Navigator.pop(context),
-                label: Text("Back",
+                label: Text("",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
-                        fontSize: 16.0,
+                        fontSize: 10.0,
                         color: Colors.transparent)),
               ),
             ),
-            buildMenuItem(Icons.account_balance, "ACCOUNTS",
+            buildMenuItem(Icons.person, S.of(context).guest,
+
                 opacity: 1.0, color: Color(0xFF015FFF)),
             Divider(),
-            buildMenuItem(Icons.compare_arrows, "TRANSFER"),
+            buildMenuItem(Icons.home, S.of(context).home,),
             Divider(),
-            buildMenuItem(Icons.receipt, "STATEMENTS"),
+            buildMenuItem(Icons.local_mall, S.of(context).my_orders,),
             Divider(),
-            buildMenuItem(Icons.attach_money, "PAYMENTS"),
+            buildMenuItem(Icons.settings, S.of(context).settings,),
             Divider(),
-            buildMenuItem(Icons.sentiment_satisfied, "INVESTMENTS"),
+            buildMenuItem(Icons.notifications, S.of(context).notifications,),
             Divider(),
-            buildMenuItem(Icons.phone, "SUPPORT"),
+            buildMenuItem(Icons.exit_to_app, currentUser.value.apiToken != null ? S.of(context).log_out : S.of(context).login,
+            ),
             Divider()
           ],
         ),
