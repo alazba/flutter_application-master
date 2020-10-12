@@ -193,10 +193,11 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                       dense: true,
                       contentPadding: EdgeInsets.symmetric(vertical: 0),
 
-                      title: Text(
+                     /* title: Text(
                         S.of(context).product_categories,
                         style: Theme.of(context).textTheme.headline4,
-                      ),
+                      ),*/
+
                     ),
                   );
                 case 'categories':

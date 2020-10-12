@@ -10,21 +10,21 @@ class ReviewsListWidget extends StatelessWidget {
 
   ReviewsListWidget({Key key, this.reviewsList}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return reviewsList.isEmpty
-        ? CircularLoadingWidget(height: 200)
-        : ListView.separated(
-            padding: EdgeInsets.all(0),
-            itemBuilder: (context, index) {
-              return ReviewItemWidget(review: reviewsList.elementAt(index));
-            },
-            separatorBuilder: (context, index) {
-              return SizedBox(height: 20);
-            },
-            itemCount: reviewsList.length,
-            primary: false,
-            shrinkWrap: true,
-          );
-  }
+@override
+Widget build(BuildContext context) {
+  return reviewsList.isEmpty
+      ? CircularLoadingWidget(height: 200)
+      : ListView.separated(
+    padding: EdgeInsets.all(0),
+    itemBuilder: (context, index) {
+      return ReviewItemWidget(review: reviewsList.elementAt(index));
+    },
+    separatorBuilder: (context, index) {
+      return SizedBox(height: 20);
+    },
+    itemCount: reviewsList.length,
+    primary: false,
+    shrinkWrap: true,
+  );
+}
 }

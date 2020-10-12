@@ -110,7 +110,9 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                                         },
                                         padding: EdgeInsets.symmetric(vertical: 5),
                                         color: Helper.of(context).getColorFromHex(slide.buttonColor),
-                                        shape: StadiumBorder(),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(5.0),
+                                        ),
                                         child: Text(
                                           slide.button,
                                           textAlign: TextAlign.start,
