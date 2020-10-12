@@ -78,7 +78,7 @@ class _PagesWidgetState extends State<PagesWidget> {
       onWillPop: Helper.of(context).onWillPop,
       child: Scaffold(
         key: widget.scaffoldKey,
-        drawer: DrawerWidget(),
+        drawer: AppDrawer(),
         endDrawer: FilterWidget(onFilter: (filter) {
           Navigator.of(context).pushReplacementNamed('/Pages', arguments: widget.currentTab);
         }),

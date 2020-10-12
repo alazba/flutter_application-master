@@ -17,10 +17,10 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 160.0,
+      width: 130.0,
       child: Drawer(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 10.0),
@@ -29,13 +29,12 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   Icons.arrow_back,
                   color: Color(0xFF015FFF),
                 ),
-                onPressed: null,
+                onPressed: () => Navigator.pop(context),
                 label: Text("Back",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 16.0,
-                        color: Colors.black)),
-                color: Colors.black,
+                        color: Colors.transparent)),
               ),
             ),
             buildMenuItem(Icons.account_balance, "ACCOUNTS",
@@ -69,7 +68,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
             ),
             Icon(
               icon,
-              size: 50.0,
+              size: 30.0,
               color: color,
             ),
             SizedBox(

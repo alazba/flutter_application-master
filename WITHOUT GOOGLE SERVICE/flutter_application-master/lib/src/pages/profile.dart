@@ -30,7 +30,7 @@ class _ProfileWidgetState extends StateMVC<ProfileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _con.scaffoldKey,
-      drawer: DrawerWidget(),
+      drawer: AppDrawer(),
       appBar: AppBar(
         leading: new IconButton(
           icon: new Icon(Icons.sort, color: Theme.of(context).primaryColor),
