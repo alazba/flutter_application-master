@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import '../elements/HomeShopItem.dart';
+import '../elements/HomeShopGridItem.dart';
 
 import '../elements/CircularLoadingWidget.dart';
 import '../models/market.dart';
