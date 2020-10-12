@@ -18,6 +18,7 @@ class HomeController extends ControllerMVC {
   List<Slide> slides = <Slide>[];
   List<Market> topMarkets = <Market>[];
   List<Market> popularMarkets = <Market>[];
+  List<Market> markets = <Market>[];
   List<Review> recentReviews = <Review>[];
   List<Product> trendingProducts = <Product>[];
 
@@ -28,6 +29,16 @@ class HomeController extends ControllerMVC {
     listenForCategories();
     listenForPopularMarkets();
     listenForRecentReviews();
+    listenForAllMarkets();
+  }
+
+  Future<void> listenForAllMarkets() async {
+    final Stream<Market> stream = await getMarkets();
+    stream.listen((Market _market) {
+      setState(() => markets.add(_market));
+    }, onError: (a) {
+      print(a);
+    }, onDone: () {});
   }
 
   Future<void> listenForSlides() async {
@@ -49,14 +60,16 @@ class HomeController extends ControllerMVC {
   }
 
   Future<void> listenForTopMarkets() async {
-    final Stream<Market> stream = await getNearMarkets(deliveryAddress.value, deliveryAddress.value);
+    final Stream<Market> stream =
+        await getNearMarkets(deliveryAddress.value, deliveryAddress.value);
     stream.listen((Market _market) {
       setState(() => topMarkets.add(_market));
     }, onError: (a) {}, onDone: () {});
   }
 
   Future<void> listenForPopularMarkets() async {
-    final Stream<Market> stream = await getPopularMarkets(deliveryAddress.value);
+    final Stream<Market> stream =
+        await getPopularMarkets(deliveryAddress.value);
     stream.listen((Market _market) {
       setState(() => popularMarkets.add(_market));
     }, onError: (a) {}, onDone: () {});
@@ -70,7 +83,8 @@ class HomeController extends ControllerMVC {
   }
 
   Future<void> listenForTrendingProducts() async {
-    final Stream<Product> stream = await getTrendingProducts(deliveryAddress.value);
+    final Stream<Product> stream =
+        await getTrendingProducts(deliveryAddress.value);
     stream.listen((Product _product) {
       setState(() => trendingProducts.add(_product));
     }, onError: (a) {
@@ -105,5 +119,6 @@ class HomeController extends ControllerMVC {
     await listenForCategories();
     await listenForPopularMarkets();
     await listenForRecentReviews();
+    await listenForAllMarkets();
   }
 }

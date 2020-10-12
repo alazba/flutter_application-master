@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:markets/src/elements/HomeShopList.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
@@ -204,7 +205,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                   return CategoriesCarouselWidget(
                     categories: _con.categories,
                   );
-                /*case 'popular_heading':
+                case 'popular_heading':
                   return Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                     child: ListTile(
@@ -227,7 +228,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                       marketsList: _con.popularMarkets,
                       heroTag: 'home_markets',
                     ),
-                  );*/
+                  );
                 case 'recent_reviews_heading':
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -247,7 +248,8 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                 case 'recent_reviews':
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: ReviewsListWidget(reviewsList: _con.recentReviews),
+                   // child: ReviewsListWidget(reviewsList: _con.recentReviews),
+                    child: HomeShopList(marketsList: _con.markets),
                   );
                 default:
                   return SizedBox(height: 0);
