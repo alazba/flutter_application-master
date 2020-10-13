@@ -235,10 +235,10 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                     child: ListTile(
                       dense: true,
                       contentPadding: EdgeInsets.symmetric(vertical: 20),
-                      leading: Icon(
-                        Icons.recent_actors,
-                        color: Theme.of(context).hintColor,
-                      ),
+                      // leading: Icon(
+                      //   Icons.recent_actors,
+                      //   color: Theme.of(context).hintColor,
+                      // ),
                       title: Text(
                         S.of(context).recent_reviews,
                         style: Theme.of(context).textTheme.headline4,
