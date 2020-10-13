@@ -182,7 +182,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickup_your_product_from_the_market" : MessageLookupByLibrary.simpleMessage("التقاط المنتج الخاص بك من السوق"),
     "productRefreshedSuccessfuly" : MessageLookupByLibrary.simpleMessage("Product refreshed successfully"),
     "product_categories" : MessageLookupByLibrary.simpleMessage("المنتجات"),
-    "products" : MessageLookupByLibrary.simpleMessage("Products"),
+    "products" : MessageLookupByLibrary.simpleMessage("المنتجات"),
     "products_result" : MessageLookupByLibrary.simpleMessage("نتيجة المنتجات"),
     "products_results" : MessageLookupByLibrary.simpleMessage("نتائج المنتجات"),
     "profile" : MessageLookupByLibrary.simpleMessage("الملف الشخصي"),

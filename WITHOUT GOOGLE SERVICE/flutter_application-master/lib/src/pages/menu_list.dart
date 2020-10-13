@@ -134,7 +134,7 @@ class _MenuWidgetState extends StateMVC<MenuWidget> {
                             backgroundColor: Theme.of(context).focusColor.withOpacity(0.1),
                             selectedColor: Theme.of(context).accentColor,
                             selected: _selected,
-                            //shape: StadiumBorder(side: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.05))),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                             showCheckmark: false,
                             avatar: (_category.id == '0')
                                 ? null

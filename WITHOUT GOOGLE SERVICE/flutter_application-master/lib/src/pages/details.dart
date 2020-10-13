@@ -54,7 +54,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
     FloatingActionButton.extended(
 
 
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.black12,
 
 
 
@@ -91,7 +91,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
 
         ),
 
-        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
 
         body: RefreshIndicator(
           onRefresh: _con.refreshMarket,
