@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import '../elements/HomeShopItem.dart';
 import '../elements/HomeShopGridList.dart';
+import '../elements/HomeShopGridItem.dart';
 
 import '../elements/CircularLoadingWidget.dart';
 import '../models/market.dart';
@@ -15,16 +15,20 @@ class HomeShopGridList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return marketsList.isEmpty
-        ? CircularLoadingWidget(height: 200)
+        ? CircularLoadingWidget(height: 130)
         : GridView.builder(
-      gridDelegate:
-      new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      itemBuilder: (context, index) {
-        return HomeShopItem(market: marketsList.elementAt(index));
-      },
-      itemCount: marketsList.length,
-      primary: false,
-      shrinkWrap: true,
-    );
+            gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+            /*childAspectRatio: MediaQuery.of(context).size.width /
+                (MediaQuery.of(context).size.height )*/
+            ),
+            //padding: const EdgeInsets.all(0),
+            itemBuilder: (context, index) {
+              return HomeShopGridItem(market: marketsList.elementAt(index));
+            },
+            itemCount: marketsList.length,
+            primary: false,
+            shrinkWrap: true,
+          );
   }
 }
