@@ -7,11 +7,12 @@ import '../models/market.dart';
 import '../models/route_argument.dart';
 import '../repository/settings_repository.dart';
 
-class HomeShopGridItem extends StatelessWidget {
+// ignore: must_be_immutable
+class CardWidget extends StatelessWidget {
   Market market;
   String heroTag;
 
-  HomeShopGridItem({Key key, this.market, this.heroTag}) : super(key: key);
+  CardWidget({Key key, this.market, this.heroTag}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -139,6 +140,9 @@ class HomeShopGridItem extends StatelessWidget {
                               softWrap: false,
                             )
                           : SizedBox(height: 0)*/
+                      Row(children: [new Container(
+                        height: 20.0,
+                      ),],),
                       Row(
                         children: Helper.getStarsList(double.parse(market.rate)),
                       ),

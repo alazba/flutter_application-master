@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:markets/src/elements/HomeShopList.dart';
+import '../elements/HomeShopList.dart';
+import '../elements/HomeShopGridList.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../generated/l10n.dart';
@@ -249,7 +250,8 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                    // child: ReviewsListWidget(reviewsList: _con.recentReviews),
-                    child: HomeShopList(marketsList: _con.markets),
+                  //  child: HomeShopList(marketsList: _con.markets),
+                    child: HomeShopGridList(marketsList: _con.markets),
                   );
                 default:
                   return SizedBox(height: 0);
