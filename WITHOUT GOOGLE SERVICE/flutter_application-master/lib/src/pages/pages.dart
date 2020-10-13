@@ -57,7 +57,8 @@ class _PagesWidgetState extends State<PagesWidget> {
           widget.currentPage = NotificationsWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
         case 1:
-          widget.currentPage = MapWidget(parentScaffoldKey: widget.scaffoldKey, routeArgument: widget.routeArgument);
+          widget.currentPage = OrdersWidget(parentScaffoldKey: widget.scaffoldKey);
+          //widget.currentPage = MapWidget(parentScaffoldKey: widget.scaffoldKey, routeArgument: widget.routeArgument);
           break;
         case 2:
           widget.currentPage = HomeWidget(parentScaffoldKey: widget.scaffoldKey);
@@ -104,7 +105,7 @@ class _PagesWidgetState extends State<PagesWidget> {
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.location_on),
+              icon: Icon(Icons.assignment),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
