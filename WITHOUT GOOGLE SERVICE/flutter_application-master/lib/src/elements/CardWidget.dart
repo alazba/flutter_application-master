@@ -140,6 +140,9 @@ class CardWidget extends StatelessWidget {
                               softWrap: false,
                             )
                           : SizedBox(height: 0)*/
+                     Row(children: [new Container(
+                       height: 20.0,
+                     ),],),
                       Row(
                         children: Helper.getStarsList(double.parse(market.rate)),
                       ),
