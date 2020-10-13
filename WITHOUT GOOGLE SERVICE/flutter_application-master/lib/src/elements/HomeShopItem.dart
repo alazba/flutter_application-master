@@ -56,7 +56,7 @@ class HomeShopItem extends StatelessWidget {
                             style: Theme.of(context).textTheme.headline6.merge(TextStyle(color: Theme.of(context).hintColor)),
                           ),
                         ),
-                        SizedBox(
+                    /*    SizedBox(
                           height: 32,
                           child: Chip(
                             padding: EdgeInsets.all(0),
@@ -74,7 +74,7 @@ class HomeShopItem extends StatelessWidget {
                             backgroundColor: Theme.of(context).accentColor.withOpacity(0.9),
                             shape: StadiumBorder(),
                           ),
-                        ),
+                        ),*/
                       ],
                     ),
                     Text(
@@ -87,13 +87,13 @@ class HomeShopItem extends StatelessWidget {
               )
             ],
           ),
-          Text(
+    /*      Text(
             Helper.skipHtml(market.information),
             style: Theme.of(context).textTheme.bodyText2,
             overflow: TextOverflow.ellipsis,
             softWrap: false,
             maxLines: 3,
-          )
+          )*/
         ],
       ),
     );
