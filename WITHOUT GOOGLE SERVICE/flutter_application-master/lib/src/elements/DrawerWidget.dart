@@ -14,6 +14,12 @@ class AppDrawer extends StatefulWidget {
 class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
+  /*// List of icons
+  List<IconData> icons = [Icons.person,Icons.home,Icons.local_mall,Icons.favorite,Icons.notifications,Icons.settings,Icons.exit_to_app];
+  // List of Navigator
+  List<Future> navigators = [Navigator.of(context).pushReplacementNamed('/Login'), Navigator.of(context).pushNamed('/Pages', arguments: 2),Navigator.of(context).pushNamed('/Pages', arguments: 3),Navigator.of(context).pushNamed('/Pages', arguments: 4), Navigator.of(context).pushNamed('/Pages', arguments: 0), Navigator.of(context).pushNamed('/Settings'),Navigator.of(context).pushReplacementNamed('/Login'),];
+  //List of context
+  List<String> contexts = [S.of(context).guest,S.of(context).home,S.of(context).my_orders,S.of(context).favorite_products,S.of(context).notifications,S.of(context).log_out,S.of(context).login];*/
     return SizedBox(
       width: 100.0,
       child: Drawer(
@@ -70,7 +76,7 @@ class _AppDrawerState extends State<AppDrawer> {
             Divider(),
             InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed('/Pages', arguments: 0);
+                Navigator.of(context).pushNamed('/Pages', arguments: 4);
               },
               child: buildMenuItem(
                 Icons.favorite,S.of(context).favorite_products,
