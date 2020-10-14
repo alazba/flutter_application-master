@@ -10,7 +10,7 @@ import '../repository/settings_repository.dart';
 // ignore: must_be_immutable
 class HomeShopGridItem extends StatelessWidget {
   Market market;
-  String heroTag;
+//  String heroTag;
 
   HomeShopGridItem({Key key, this.market}) : super(key: key);
   @override
