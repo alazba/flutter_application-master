@@ -24,7 +24,7 @@ class HomeShopGridList extends StatelessWidget {
             ),
             //padding: const EdgeInsets.all(0),
             itemBuilder: (context, index) {
-              return HomeShopGridItem(market: marketsList.elementAt(index));
+              return HomeShopItem(market: marketsList.elementAt(index));
             },
             itemCount: marketsList.length,
             primary: false,

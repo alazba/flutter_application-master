@@ -17,6 +17,7 @@ class _AppDrawerState extends State<AppDrawer> {
     return SizedBox(
       width: 100.0,
       child: Drawer(
+        child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
@@ -35,24 +36,91 @@ class _AppDrawerState extends State<AppDrawer> {
                         color: Colors.transparent)),
               ),
             ),
-
-            buildMenuItem( Icons.person, S.of(context).guest,
-
-                opacity: 1.0, color: Color(0xff3d619b)),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/Login');
+              },
+              child: buildMenuItem(
+                Icons.person,
+                S.of(context).guest,
+                opacity: 1.0,
+                color: Color(0xff3d619b),
+              ),
+            ),
             Divider(),
-            buildMenuItem(Icons.home, S.of(context).home,),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed('/Pages', arguments: 2);
+              },
+              child: buildMenuItem(
+                Icons.home,
+                S.of(context).home,
+              ),
+            ),
             Divider(),
-            buildMenuItem(Icons.local_mall, S.of(context).my_orders,),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed('/Pages', arguments: 3);
+              },
+              child: buildMenuItem(
+                Icons.local_mall,
+                S.of(context).my_orders,
+              ),
+            ),
             Divider(),
-            buildMenuItem(Icons.settings, S.of(context).settings,),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed('/Pages', arguments: 0);
+              },
+              child: buildMenuItem(
+                Icons.favorite,S.of(context).favorite_products,
+              ),),
             Divider(),
-            buildMenuItem(Icons.notifications, S.of(context).notifications,),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed('/Pages', arguments: 0);
+              },
+              child: buildMenuItem(
+                Icons.notifications,
+                S.of(context).notifications,
+              ),
+            ),
             Divider(),
-            buildMenuItem(Icons.exit_to_app, currentUser.value.apiToken != null ? S.of(context).log_out : S.of(context).login,
+            InkWell(
+              onTap: () {
+                if (currentUser.value.apiToken != null) {
+                  Navigator.of(context).pushNamed('/Settings');
+                } else {
+                  Navigator.of(context).pushReplacementNamed('/Login');
+                }
+              },
+              child: buildMenuItem(
+                Icons.settings,
+                S.of(context).settings,
+              ),
+            ),
+            Divider(),
+            InkWell(
+              onTap: () {
+                if (currentUser.value.apiToken != null) {
+                  logout().then((value) {
+                    Navigator.of(context).pushNamedAndRemoveUntil('/Pages', (Route<dynamic> route) => false, arguments: 2);
+                  });
+                } else {
+                  Navigator.of(context).pushNamed('/Login');
+                }
+              },
+              child: buildMenuItem(
+                Icons.exit_to_app,
+                currentUser.value.apiToken != null
+                    ? S.of(context).log_out
+                    : S.of(context).login,
+              ),
             ),
             Divider()
           ],
         ),
+      )
       ),
     );
   }
@@ -65,7 +133,7 @@ class _AppDrawerState extends State<AppDrawer> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 20.0,
+              height: 15.0,
             ),
             Icon(
               icon,
