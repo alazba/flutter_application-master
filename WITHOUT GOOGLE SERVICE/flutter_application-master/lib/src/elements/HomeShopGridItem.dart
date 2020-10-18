@@ -40,7 +40,7 @@ class HomeShopGridItem extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
                   child: CachedNetworkImage(
-                  height:125,
+                  height:140,
                     width: double.infinity,
                     fit: BoxFit.cover,
                     imageUrl: market.image.url,

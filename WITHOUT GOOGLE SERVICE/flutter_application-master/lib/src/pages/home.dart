@@ -167,15 +167,16 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                     ),
                   );
                 case 'top_markets':
+                  // Change it to trending product
                   return CardsCarouselWidget(marketsList: _con.topMarkets, heroTag: 'home_top_markets');
                 case 'trending_week_heading':
                   return ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                    leading: Icon(
+                    /*leading: Icon(
                       Icons.trending_up,
                       color: Theme.of(context).hintColor,
-                    ),
+                    ),*/
                     title: Text(
                       S.of(context).trending_this_week,
                       style: Theme.of(context).textTheme.headline4,
@@ -212,10 +213,10 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                     child: ListTile(
                       dense: true,
                       contentPadding: EdgeInsets.symmetric(vertical: 0),
-                      leading: Icon(
+                      /*leading: Icon(
                         Icons.trending_up,
                         color: Theme.of(context).hintColor,
-                      ),
+                      ),*/
                       title: Text(
                         S.of(context).most_popular,
                         style: Theme.of(context).textTheme.headline4,

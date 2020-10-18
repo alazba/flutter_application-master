@@ -18,13 +18,14 @@ class HomeShopGridList extends StatelessWidget {
         ? CircularLoadingWidget(height: 130)
         : GridView.builder(
             gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-            /*childAspectRatio: MediaQuery.of(context).size.width /
-                (MediaQuery.of(context).size.height )*/
+              //modify the list to be one market in each row.
+                crossAxisCount: 1,
+              childAspectRatio: MediaQuery.of(context).size.width /
+                  (MediaQuery.of(context).size.height / 3),
             ),
             //padding: const EdgeInsets.all(0),
             itemBuilder: (context, index) {
-              return HomeShopItem(market: marketsList.elementAt(index));
+              return HomeShopGridItem(market: marketsList.elementAt(index));
             },
             itemCount: marketsList.length,
             primary: false,
