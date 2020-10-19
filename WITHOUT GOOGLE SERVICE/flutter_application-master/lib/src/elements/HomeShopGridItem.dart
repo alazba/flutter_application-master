@@ -27,7 +27,7 @@ class HomeShopGridItem extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
+       // mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           // Image of the card
@@ -78,8 +78,8 @@ class HomeShopGridItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              /*mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,*/
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Expanded(
                   flex: 1,
