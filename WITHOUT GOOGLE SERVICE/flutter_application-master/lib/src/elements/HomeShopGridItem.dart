@@ -16,7 +16,7 @@ class HomeShopGridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 10,
+      width: 15,
       margin: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
@@ -40,7 +40,7 @@ class HomeShopGridItem extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
                   child: CachedNetworkImage(
-                  height:150,
+                  height:140,
                     width: double.infinity,
                     fit: BoxFit.cover,
                     imageUrl: market.image.url,

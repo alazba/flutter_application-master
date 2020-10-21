@@ -63,25 +63,6 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                 arguments: new RouteArgument(id: widget.routeArgument.id));
           },
 
-          isExtended: false,
-
-         icon:
-         Transform.scale(
-
-           alignment: Alignment(1.6, 0.3),
-           scale: 2.2,
-           child:
-
-             IconButton(
-               iconSize: 30,
-               onPressed: (){},
-              icon:
-
-              new Image.asset("assets/img/bag.png"),
-           ),
-
-         ),
-
           label:
 
                 Text(
@@ -321,26 +302,26 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                         dense: true,
                                         contentPadding:
                                             EdgeInsets.symmetric(vertical: 0),
-                                        leading: Icon(
-                                          Icons.recent_actors,
-                                          color: Theme.of(context).hintColor,
-                                        ),
-                                        title: Text(
-                                          S.of(context).what_they_say,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline4,
-                                        ),
+                                        // leading: Icon(
+                                        //   Icons.recent_actors,
+                                        //   color: Theme.of(context).hintColor,
+                                        // ),
+                                        // title: Text(
+                                        //   S.of(context).what_they_say,
+                                        //   style: Theme.of(context)
+                                        //       .textTheme
+                                        //       .headline4,
+                                        // ),
                                       ),
-                                    ),
-                              _con.reviews.isEmpty
-                                  ? SizedBox(height: 5)
-                                  : Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 10),
-                                      child: ReviewsListWidget(
-                                          reviewsList: _con.reviews),
-                                    ),
+                                     ),
+                              // _con.reviews.isEmpty
+                                    SizedBox(height: 5)
+                              //     : Padding(
+                              //         padding: const EdgeInsets.symmetric(
+                              //             horizontal: 20, vertical: 10),
+                              //         child: ReviewsListWidget(
+                              //             reviewsList: _con.reviews),
+                              //       ),
                             ],
                           ),
                         ),
