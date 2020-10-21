@@ -11,7 +11,6 @@ class HomeShopItem extends StatelessWidget {
   Market market;
 
   HomeShopItem({Key key, this.market}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return InkWell(

@@ -27,7 +27,7 @@ class HomeShopGridItem extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-       // mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           // Image of the card
@@ -40,7 +40,7 @@ class HomeShopGridItem extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
                   child: CachedNetworkImage(
-                  height:140,
+                  height:150,
                     width: double.infinity,
                     fit: BoxFit.cover,
                     imageUrl: market.image.url,
