@@ -29,7 +29,7 @@ class _CardsCarouselWidgetState extends State<CardsCarouselWidget> {
         : Container(
             height: 263,
             child: ListView.builder(
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.vertical,
               itemCount: widget.marketsList.length,
               itemBuilder: (context, index) {
                 return GestureDetector(

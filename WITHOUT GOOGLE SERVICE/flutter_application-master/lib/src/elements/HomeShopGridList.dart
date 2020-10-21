@@ -5,12 +5,14 @@ import '../elements/HomeShopGridItem.dart';
 
 import '../elements/CircularLoadingWidget.dart';
 import '../models/market.dart';
+import '../models/route_argument.dart';
 
 // ignore: must_be_immutable
 class HomeShopGridList extends StatelessWidget {
   List<Market> marketsList;
+  String heroTag;
 
-  HomeShopGridList({Key key, this.marketsList}) : super(key: key);
+  HomeShopGridList({Key key, this.marketsList, String heroTag}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,12 @@ class HomeShopGridList extends StatelessWidget {
             ),
             //padding: const EdgeInsets.all(0),
             itemBuilder: (context, index) {
+              onTap: () async {
+                await Navigator.of(context).pushNamed('/Details',
+                    arguments: RouteArgument(
+                    id: marketsList.elementAt(index).id,
+                heroTag: heroTag,));
+              };
               return HomeShopItem(market: marketsList.elementAt(index));
             },
             itemCount: marketsList.length,
