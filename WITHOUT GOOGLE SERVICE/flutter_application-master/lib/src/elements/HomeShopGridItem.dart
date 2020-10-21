@@ -10,9 +10,9 @@ import '../repository/settings_repository.dart';
 // ignore: must_be_immutable
 class HomeShopGridItem extends StatelessWidget {
   Market market;
-//  String heroTag;
+  String heroTag;
 
-  HomeShopGridItem({Key key, this.market}) : super(key: key);
+  HomeShopGridItem({Key key, this.market, this.heroTag}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +36,7 @@ class HomeShopGridItem extends StatelessWidget {
             alignment: AlignmentDirectional.bottomStart,
             children: <Widget>[
               Hero(
-                tag: market.id,
+                tag:this.heroTag+ market.id,
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
                   child: CachedNetworkImage(
