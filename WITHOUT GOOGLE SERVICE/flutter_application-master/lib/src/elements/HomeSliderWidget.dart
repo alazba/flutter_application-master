@@ -112,7 +112,7 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                                             }
                                             },
                                           padding: EdgeInsets.symmetric(vertical: 5),
-                                          color: Helper.of(context).getColorFromHex(slide.buttonColor),
+                                          color:  Color(0xffb05151),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(5),
                                           ),

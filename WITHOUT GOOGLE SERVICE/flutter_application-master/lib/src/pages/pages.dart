@@ -78,6 +78,7 @@ class _PagesWidgetState extends State<PagesWidget> {
     return WillPopScope(
       onWillPop: Helper.of(context).onWillPop,
       child: Scaffold(
+        //backgroundColor: Colors.transparent,
         key: widget.scaffoldKey,
         drawer: AppDrawer(),
         endDrawer: FilterWidget(onFilter: (filter) {
