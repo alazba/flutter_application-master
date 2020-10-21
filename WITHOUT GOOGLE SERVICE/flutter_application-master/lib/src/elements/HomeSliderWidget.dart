@@ -148,8 +148,9 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                             Radius.circular(5),
                           ),
                           color: _current == widget.slides.indexOf(slide)
-                              ? Helper.of(context).getColorFromHex(slide.indicatorColor)
-                              : Helper.of(context).getColorFromHex(slide.indicatorColor).withOpacity(0.3)),
+
+                              ? Color(0xffb05151)
+                              : Color(0xffb05151).withOpacity(0.3)),
                     );
                   }).toList(),
                 ),
