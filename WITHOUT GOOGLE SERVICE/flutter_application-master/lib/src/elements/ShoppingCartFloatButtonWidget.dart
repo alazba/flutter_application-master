@@ -54,7 +54,7 @@ class _ShoppingCartFloatButtonWidgetState extends StateMVC<ShoppingCartFloatButt
 
             Icon(
               Icons.shopping_cart,
-              color: this.widget.iconColor,
+              color: Colors.black45,
               size: 28,
             ),
 

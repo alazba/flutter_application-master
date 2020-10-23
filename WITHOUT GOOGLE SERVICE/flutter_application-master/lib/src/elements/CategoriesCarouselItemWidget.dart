@@ -26,18 +26,18 @@ class CategoriesCarouselItemWidget extends StatelessWidget {
             tag: category.id,
             child: Container(
               margin: EdgeInsetsDirectional.only(start: this.marginLeft, end: 20),
-              width: 80,
-              height: 80,
+              width: 90,
+              height: 90,
               decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
                   boxShadow: [BoxShadow(color: Theme.of(context).focusColor.withOpacity(0.2), offset: Offset(0, 2), blurRadius: 7.0)]),
               child: Padding(
-                padding: const EdgeInsets.all(15),
-                child: category.image.url.toLowerCase().endsWith('.svg')
+                padding: const EdgeInsets.all(2),
+                  child: category.image.url.toLowerCase().endsWith('.svg')
                     ? SvgPicture.network(
                         category.image.url,
-                        color: Theme.of(context).accentColor,
+                       // color: Theme.of(context).accentColor,
                       )
                     : CachedNetworkImage(
                         fit: BoxFit.cover,

@@ -36,7 +36,9 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // backgroundColor: Colors.grey,
+
+      backgroundColor: Color(0xfff2f1ed),
+
       appBar: AppBar(
         leading: new IconButton(
           icon: new Icon(Icons.sort, color: Theme.of(context).hintColor),

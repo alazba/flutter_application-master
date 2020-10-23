@@ -292,28 +292,28 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                         );
                                       },
                                     ),
-                              SizedBox(height: 100),
-                              _con.reviews.isEmpty
-                                  ? SizedBox(height: 5)
-                                  : Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 10, horizontal: 20),
-                                      child: ListTile(
-                                        dense: true,
-                                        contentPadding:
-                                            EdgeInsets.symmetric(vertical: 0),
-                                        // leading: Icon(
-                                        //   Icons.recent_actors,
-                                        //   color: Theme.of(context).hintColor,
-                                        // ),
-                                        // title: Text(
-                                        //   S.of(context).what_they_say,
-                                        //   style: Theme.of(context)
-                                        //       .textTheme
-                                        //       .headline4,
-                                        // ),
-                                      ),
-                                     ),
+                              SizedBox(height: 5),
+                              // _con.reviews.isEmpty
+                              //     ? SizedBox(height: 5)
+                              //     : Padding(
+                              //         padding: const EdgeInsets.symmetric(
+                              //             vertical: 10, horizontal: 20),
+                              //         child: ListTile(
+                              //           dense: true,
+                              //           contentPadding:
+                              //               EdgeInsets.symmetric(vertical: 0),
+                              //           // leading: Icon(
+                              //           //   Icons.recent_actors,
+                              //           //   color: Theme.of(context).hintColor,
+                              //           // ),
+                              //           // title: Text(
+                              //           //   S.of(context).what_they_say,
+                              //           //   style: Theme.of(context)
+                              //           //       .textTheme
+                              //           //       .headline4,
+                              //           // ),
+                              //         ),
+                              //        ),
                               // _con.reviews.isEmpty
                                     SizedBox(height: 5)
                               //     : Padding(
@@ -328,7 +328,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                       ],
                     ),
                     Positioned(
-                      top: 50,
+                      top: 25,
                       right: 345,
                       child: ShoppingCartFloatButtonWidget(
                         iconColor: Theme.of(context).primaryColor,
