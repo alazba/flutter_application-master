@@ -26,21 +26,26 @@ class CategoriesCarouselItemWidget extends StatelessWidget {
             tag: category.id,
             child: Container(
               margin: EdgeInsetsDirectional.only(start: this.marginLeft, end: 20),
-              width: 90,
-              height: 90,
+              width: 70,
+              height: 70,
               decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
                   boxShadow: [BoxShadow(color: Theme.of(context).focusColor.withOpacity(0.2), offset: Offset(0, 2), blurRadius: 7.0)]),
               child: Padding(
                 padding: const EdgeInsets.all(2),
-                  child: category.image.url.toLowerCase().endsWith('.svg')
+
+                  child:
+
+                  category.image.url.toLowerCase().endsWith('.svg')
                     ? SvgPicture.network(
                         category.image.url,
+                        fit: BoxFit.cover,
                        // color: Theme.of(context).accentColor,
                       )
+
                     : CachedNetworkImage(
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                         imageUrl: category.image.icon,
                         placeholder: (context, url) => Image.asset(
                           'assets/img/loading.gif',
@@ -49,6 +54,7 @@ class CategoriesCarouselItemWidget extends StatelessWidget {
                         errorWidget: (context, url, error) => Icon(Icons.error),
                       ),
               ),
+
             ),
           ),
           SizedBox(height: 5),
