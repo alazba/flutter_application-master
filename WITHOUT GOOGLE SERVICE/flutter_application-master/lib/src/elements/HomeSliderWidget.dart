@@ -112,7 +112,7 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                                             }
                                             },
                                           padding: EdgeInsets.symmetric(vertical: 5),
-                                          color:  Color(0xffb05151),
+                                          color:  Color(0xff3d619b),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(5),
                                           ),
@@ -149,8 +149,8 @@ class _HomeSliderWidgetState extends State<HomeSliderWidget> {
                           ),
                           color: _current == widget.slides.indexOf(slide)
 
-                              ? Color(0xffb05151)
-                              : Color(0xffb05151).withOpacity(0.3)),
+                              ? Color(0xff3d619b)
+                              : Color(0xff3d619b).withOpacity(0.3)),
                     );
                   }).toList(),
                 ),
